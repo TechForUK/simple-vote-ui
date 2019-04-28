@@ -34,7 +34,7 @@ function TypeOfVoter({ formData, updateData, submitData }) {
         <input id="differentAddress" name="differentAddress" type="checkbox" checked={formData.differentAddress} onChange={updateData} />
       </label>
       <label htmlFor="email">
-        Email (optional):
+        Email:
         <input id="email" name="email" type="text" value={formData.email} onChange={updateData} />
       </label>
       <label htmlFor="nationality">
