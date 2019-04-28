@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 
 import './Form.css';
 
-function TypeOfVoter({ formData, updateData }) {
+function TypeOfVoter({ formData, updateData, submitData }) {
   return (
-    <form className="Form">
+    <form className="Form" onSubmit={submitData}>
       <label htmlFor="firstName">
         First Name(s):
         <input id="firstName" name="firstName" type="text" value={formData.firstName} onChange={updateData} />

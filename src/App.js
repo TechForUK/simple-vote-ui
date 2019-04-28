@@ -1,6 +1,11 @@
 import React from 'react';
+import axios from 'axios';
+
 import RenderingController from './RenderingController';
+
 import './App.css';
+
+const server = '';
 
 class App extends React.Component {
   constructor(props) {
@@ -48,6 +53,7 @@ class App extends React.Component {
     };
 
     this.updateData = this.updateData.bind(this);
+    this.submitData = this.submitData.bind(this);
     this.switchView = this.switchView.bind(this);
   }
 
@@ -70,12 +76,22 @@ class App extends React.Component {
     });
   }
 
+  submitData(e) {
+    e.preventDefault();
+    const { formData } = this.state;
+    axios.post(`${server}/register`, { userData: { ...formData } }).then((response) => {
+      console.log(response);
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
+
   switchView(newView) {
     this.setState({ view: newView });
   }
 
   render() {
-    const { updateData, switchView } = this;
+    const { updateData, submitData, switchView } = this;
     const { view, formData } = this.state;
 
     return (
@@ -84,8 +100,9 @@ class App extends React.Component {
           <RenderingController
             view={view}
             formData={formData}
-            switchView={switchView}
             updateData={updateData}
+            submitData={submitData}
+            switchView={switchView}
           />
         </header>
       </div>

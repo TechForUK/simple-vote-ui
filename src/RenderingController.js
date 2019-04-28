@@ -16,13 +16,19 @@ function RenderingController({
   view,
   formData,
   updateData,
+  submitData,
   switchView,
 }) {
   const CurrentView = views[view];
 
   return (
     <Fragment>
-      <CurrentView formData={formData} updateData={updateData} switchView={switchView} />
+      <CurrentView
+        formData={formData}
+        updateData={updateData}
+        submitData={submitData}
+        switchView={switchView}
+      />
     </Fragment>
   );
 }
