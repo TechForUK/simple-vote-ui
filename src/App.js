@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from './Form';
+import RenderingController from './RenderingController';
 import './App.css';
 
 class App extends React.Component {
@@ -9,6 +9,31 @@ class App extends React.Component {
       view: 'welcome',
       formData: {
         firstName: '',
+        surname: '',
+        firstLineAddress: '',
+        secondLineAddress: '',
+        postcode: '',
+        city: '',
+        differentAddress: false,
+        telephone: '',
+        email: '',
+        nationality: '',
+        movedHouse: false,
+        oldAddressFirstLineAddress: '',
+        oldAddressSecondLineAddress: '',
+        oldAddressPostcode: '',
+        oldAddressCity: '',
+        registeredAsOverseasVoter: false,
+        dateOfBirth: '',
+        nin: '',
+        changedName: '',
+        previousName: '',
+        dateOfNameChange: '',
+        postalVote: true,
+        currentDate: (() => {
+          const currentDate = new Date();
+          return `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`;
+        })(),
       },
     };
 
@@ -16,13 +41,20 @@ class App extends React.Component {
     this.switchView = this.switchView.bind(this);
   }
 
+  // For debugging purposes; remove this later
+  componentDidUpdate() {
+    console.log(this.state.formData);
+  }
+
   updateData(event) {
     const { target } = event;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const { name } = target;
+    const { formData } = this.state;
 
     this.setState({
       formData: {
+        ...formData,
         [name]: value,
       },
     });
@@ -39,7 +71,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Form
+          <RenderingController
             view={view}
             formData={formData}
             switchView={switchView}

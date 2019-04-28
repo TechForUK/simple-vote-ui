@@ -1,15 +1,25 @@
 import React, { Fragment } from 'react';
-import './Form.css';
 
 import Welcome from './formViews/Welcome';
 import TypeOfVoter from './formViews/TypeOfVoter';
+import GenericForm from './formViews/GenericForm';
+import EuForm from './formViews/EuForm';
+import UkCitizenAbroad from './formViews/UkCitizenAbroad';
 
 const views = {
   welcome: Welcome,
   typeOfVoter: TypeOfVoter,
+  genericForm: GenericForm,
+  euCitizenForm: EuForm,
+  ukCitizenAbroad: UkCitizenAbroad,
 };
 
-function Form({ view, formData, updateData, switchView }) {
+function RenderingController({
+  view,
+  formData,
+  updateData,
+  switchView,
+}) {
   const CurrentView = views[view];
 
   return (
@@ -19,4 +29,4 @@ function Form({ view, formData, updateData, switchView }) {
   );
 }
 
-export default Form;
+export default RenderingController;

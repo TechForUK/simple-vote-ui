@@ -1,14 +1,45 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-function TypeOfVoter({ formData, updateData }) {
+function TypeOfVoter({ updateData, switchView }) {
   return (
-    <form>
-      <label htmlFor="firstName">
-        First Name:
-        <input id="firstName" name="firstName" type="text" value={formData.firstName} onChange={updateData} />
-      </label>
-      <input type="submit" value="Submit" />
-    </form>
+    <Fragment>
+      <button
+        className="SegmentationButton"
+        type="button"
+        name="userType"
+        value="uk_citizen_in_uk"
+        onClick={(e) => {
+          updateData(e);
+          switchView('genericForm');
+        }}
+      >
+      I am a UK citizen living in the UK
+      </button>
+      <button
+        className="SegmentationButton"
+        type="button"
+        name="userType"
+        value="eu_citizen_in_uk"
+        onClick={(e) => {
+          updateData(e);
+          switchView('euCitizenForm');
+        }}
+      >
+      I am a EU citizen living in the UK
+      </button>
+      <button
+        className="SegmentationButton"
+        type="button"
+        name="userType"
+        value="uk_citizen_abroad"
+        onClick={(e) => {
+          updateData(e);
+          switchView('ukCitizenAbroad');
+        }}
+      >
+      I am a UK citizen living abroad
+      </button>
+    </Fragment>
   );
 }
 
