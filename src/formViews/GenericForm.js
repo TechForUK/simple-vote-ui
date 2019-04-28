@@ -101,6 +101,40 @@ function TypeOfVoter({ formData, updateData }) {
         I would like to vote by postal vote
         <input id="postalVote" name="postalVote" type="checkbox" checked={formData.postalVote} onChange={updateData} />
       </label>
+      {formData.postalVote ? (
+        <Fragment>
+          <label htmlFor="indefintiely">
+            Until further notice
+            <input id="indefintiely" name="postalVoteOption" type="radio" value="indefintiely" checked={formData.postalVoteOption === 'indefintiely'} onChange={updateData} />
+          </label>
+          <label htmlFor="specificElection">
+            For elections to be held on a specific date
+            <input id="specificElection" name="postalVoteOption" type="radio" value="specificElection" checked={formData.postalVoteOption === 'specificElection'} onChange={updateData} />
+          </label>
+          <label htmlFor="timePeriod">
+            For a period of time
+            <input id="timePeriod" name="postalVoteOption" type="radio" value="timePeriod" checked={formData.postalVoteOption === 'timePeriod'} onChange={updateData} />
+          </label>
+          {formData.postalVoteOption === 'specificElection' ? (
+            <label htmlFor="postalVoteElectionDate">
+              Elections on:
+              <input id="postalVoteElectionDate" name="postalVoteElectionDate" type="date" value={formData.postalVoteElectionDate} onChange={updateData} />
+            </label>
+          ) : null}
+          {formData.postalVoteOption === 'timePeriod' ? (
+            <Fragment>
+              <label htmlFor="postalVoteFrom">
+                From:
+                <input id="postalVoteFrom" name="postalVoteFrom" type="date" value={formData.postalVoteFrom} onChange={updateData} />
+              </label>
+              <label htmlFor="postalVoteTo">
+                To:
+                <input id="postalVoteTo" name="postalVoteTo" type="date" value={formData.postalVoteTo} onChange={updateData} />
+              </label>
+            </Fragment>
+          ) : null}
+        </Fragment>
+      ) : null}
       <input type="submit" value="Submit" />
     </form>
   );

@@ -40,6 +40,10 @@ class App extends React.Component {
         })(),
         registeredAtHome: false,
         homeCountryConstituency: '',
+        postalVoteOption: 'indefintiely',
+        postalVoteElectionDate: '',
+        postalVoteFrom: '',
+        postalVoteTo: '',
       },
     };
 
