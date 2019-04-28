@@ -4,14 +4,12 @@ import Welcome from './formViews/Welcome';
 import TypeOfVoter from './formViews/TypeOfVoter';
 import GenericForm from './formViews/GenericForm';
 import EuForm from './formViews/EuForm';
-import UkCitizenAbroad from './formViews/UkCitizenAbroad';
 
 const views = {
   welcome: Welcome,
   typeOfVoter: TypeOfVoter,
   genericForm: GenericForm,
   euCitizenForm: EuForm,
-  ukCitizenAbroad: UkCitizenAbroad,
 };
 
 function RenderingController({

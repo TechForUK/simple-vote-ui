@@ -27,18 +27,6 @@ function TypeOfVoter({ updateData, switchView }) {
       >
       I am a EU citizen living in the UK
       </button>
-      <button
-        className="SegmentationButton"
-        type="button"
-        name="userType"
-        value="uk_citizen_abroad"
-        onClick={(e) => {
-          updateData(e);
-          switchView('ukCitizenAbroad');
-        }}
-      >
-      I am a UK citizen living abroad
-      </button>
     </Fragment>
   );
 }
