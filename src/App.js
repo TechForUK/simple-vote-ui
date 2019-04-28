@@ -15,10 +15,14 @@ class App extends React.Component {
         postcode: '',
         city: '',
         differentAddress: false,
-        telephone: '',
         email: '',
         nationality: '',
         movedHouse: false,
+        firstLineCurrentAddress: '',
+        secondLineCurrentAddress: '',
+        currentPostcode: '',
+        currentCity: '',
+        citizenOf: '',
         oldAddressFirstLineAddress: '',
         oldAddressSecondLineAddress: '',
         oldAddressPostcode: '',
@@ -34,6 +38,8 @@ class App extends React.Component {
           const currentDate = new Date();
           return `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`;
         })(),
+        registeredAtHome: false,
+        homeCountryConstituency: '',
       },
     };
 

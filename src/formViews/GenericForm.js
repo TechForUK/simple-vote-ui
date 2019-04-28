@@ -30,7 +30,7 @@ function TypeOfVoter({ formData, updateData }) {
         <input id="city" name="city" type="text" value={formData.city} onChange={updateData} />
       </label>
       <label htmlFor="differentAddress">
-        Do you live at another address?
+        I live at another address
         <input id="differentAddress" name="differentAddress" type="checkbox" checked={formData.differentAddress} onChange={updateData} />
       </label>
       <label htmlFor="telephone">
@@ -49,7 +49,7 @@ function TypeOfVoter({ formData, updateData }) {
         Have you moved house in the last 12 months?
         <input id="movedHouse" name="movedHouse" type="checkbox" checked={formData.movedHouse} onChange={updateData} />
       </label>
-      { formData.movedHouse ? (
+      {formData.movedHouse ? (
         <Fragment>
           <label htmlFor="oldAddressFirstLineAddress">
             First line of address:
@@ -85,7 +85,7 @@ function TypeOfVoter({ formData, updateData }) {
         I have changed my name
         <input id="changedName" name="changedName" type="checkbox" checked={formData.changedName} onChange={updateData} />
       </label>
-      { formData.changedName ? (
+      {formData.changedName ? (
         <Fragment>
           <label htmlFor="previousName">
             Most recent previous name:

@@ -29,15 +29,47 @@ function TypeOfVoter({ formData, updateData }) {
         <input id="city" name="city" type="text" value={formData.city} onChange={updateData} />
       </label>
       <label htmlFor="differentAddress">
-        Do you live at another address?
+        I live at another address
         <input id="differentAddress" name="differentAddress" type="checkbox" checked={formData.differentAddress} onChange={updateData} />
       </label>
-      <label htmlFor="telephone">
-        Telephone (optional):
-        <input id="telephone" name="telephone" type="text" value={formData.telephone} onChange={updateData} />
+      {formData.differentAddress ? (
+        <Fragment>
+          <label htmlFor="firstLineCurrentAddress">
+            First line of current address:
+            <input id="firstLineCurrentAddress" name="firstLineCurrentAddress" type="text" value={formData.firstLineCurrentAddress} onChange={updateData} />
+          </label>
+          <label htmlFor="secondLineCurrentAddress">
+            Second line of current address:
+            <input id="secondLineCurrentAddress" name="secondLineCurrentAddress" type="text" value={formData.secondLineCurrentAddress} onChange={updateData} />
+          </label>
+          <label htmlFor="currentPostcode">
+            Postcode of current address:
+            <input id="currentPostcode" name="currentPostcode" type="text" value={formData.currentPostcode} onChange={updateData} />
+          </label>
+          <label htmlFor="currentCity">
+            Current City/Town:
+            <input id="currentCity" name="currentCity" type="text" value={formData.currentCity} onChange={updateData} />
+          </label>
+        </Fragment>
+      ) : null}
+      <label htmlFor="citizenOf">
+        I am a citizen of:
+        <input id="citizenOf" name="citizenOf" type="text" value={formData.citizenOf} onChange={updateData} />
       </label>
+      <label htmlFor="registeredAtHome">
+        My name has been entered on a register of electors in my home country
+        <input id="registeredAtHome" name="registeredAtHome" type="checkbox" checked={formData.registeredAtHome} onChange={updateData} />
+      </label>
+      {formData.registeredAtHome ? (
+        <Fragment>
+          <label htmlFor="homeCountryConstituency">
+            Name of the locality or constituency where you were last registered, as far as you know
+            <input id="homeCountryConstituency" name="homeCountryConstituency" type="text" value={formData.homeCountryConstituency} onChange={updateData} />
+          </label>
+        </Fragment>
+      ) : null}
       <label htmlFor="email">
-        Email (optional):
+        Email:
         <input id="email" name="email" type="text" value={formData.email} onChange={updateData} />
       </label>
       <label htmlFor="nationality">
@@ -48,7 +80,7 @@ function TypeOfVoter({ formData, updateData }) {
         Have you moved house in the last 12 months?
         <input id="movedHouse" name="movedHouse" type="checkbox" checked={formData.movedHouse} onChange={updateData} />
       </label>
-      { formData.movedHouse ? (
+      {formData.movedHouse ? (
         <Fragment>
           <label htmlFor="oldAddressFirstLineAddress">
             First line of address:
@@ -84,7 +116,7 @@ function TypeOfVoter({ formData, updateData }) {
         I have changed my name
         <input id="changedName" name="changedName" type="checkbox" checked={formData.changedName} onChange={updateData} />
       </label>
-      { formData.changedName ? (
+      {formData.changedName ? (
         <Fragment>
           <label htmlFor="previousName">
             Most recent previous name:
