@@ -33,10 +33,6 @@ function TypeOfVoter({ formData, updateData, submitData }) {
         I live at another address
         <input id="differentAddress" name="differentAddress" type="checkbox" checked={formData.differentAddress} onChange={updateData} />
       </label>
-      <label htmlFor="telephone">
-        Telephone (optional):
-        <input id="telephone" name="telephone" type="text" value={formData.telephone} onChange={updateData} />
-      </label>
       <label htmlFor="email">
         Email (optional):
         <input id="email" name="email" type="text" value={formData.email} onChange={updateData} />
