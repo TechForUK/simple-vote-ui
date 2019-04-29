@@ -9,18 +9,35 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background: #ffffff;
+  color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+button {
+  padding: 20px 30px 20px 30px;
+  border: 2px solid #0FCDB0;
+  border-radius:8px;
+  color: #000000;
+  font-size: 16px;
+  font-weight:bold;
+  margin: 10px;
+  background: rgb(33, 255, 222);
+}
+
+.imprint {
+  color: #aaa;
+  padding: 10px;
+  font-size:11px;
 }
 
 @keyframes App-logo-spin {
