@@ -1,19 +1,27 @@
-.image_timer {
+.image-timer {
     height:150px;
 }
-.image_logo {
+.image-logo {
     height:100px;
     margin-bottom:40px;
 }
 
-.primary_text {
+.image-row-2 {
+    height:80px;
+}
+
+.primary-text {
     color:#000;
     font-size: 22px;
     font-weight: bold;
-
 }
 
-.secondary_text {
+.secondary-text {
     color:#000;
     font-size: 16px;
+}
+
+.welcome-row-2-element {
+    display: inline-block;
+    margin: 20px;
 }
