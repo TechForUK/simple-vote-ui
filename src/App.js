@@ -105,6 +105,7 @@ class App extends React.Component {
             switchView={switchView}
           />
         </header>
+        <div className="imprint">Promoted by Best for Britain, the campaign name of UK-EU OPEN POLICY LIMITED registered at International House, 24 Holborn Viaduct, London, EC1A 2BN. Best for Britain is registered with The Electoral Commission.</div>
       </div>
     );
   }

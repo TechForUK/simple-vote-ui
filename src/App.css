@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  
 }
 
 .App-logo {
@@ -33,6 +32,12 @@ button {
   font-weight:bold;
   margin: 10px;
   background: rgb(33, 255, 222);
+}
+
+.imprint {
+  color: #aaa;
+  padding: 10px;
+  font-size:11px;
 }
 
 @keyframes App-logo-spin {
