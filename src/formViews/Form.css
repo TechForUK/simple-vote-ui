@@ -11,10 +11,40 @@
 
 .Form label>span{
   min-width: 400px;
+  max-width: 100%;
   display: inline-block;
 }
 
+@media only screen and (max-width: 400px) {
+  .Form label>span{
+    min-width: 100%;
+  }
+}
+
+
 .Form label input {
+  padding: 10px 20px 10px 20px;
+  border: 2px solid #0FCDB0;
+  border-radius:8px;
+  color: #000000;
+  font-size: 16px;
+  font-weight:bold;
+  margin-left:20px;
+  font-family: 'Courier New', Courier, monospace
+}
+
+.Form input[type=checkbox] {
+  width:40px;
+  height:40px;
+  border-radius: 0px;
+}
+
+.Form input[type=radio] {
+  width:40px;
+  height:40px;
+}
+
+.Form input[type=date] {
   padding: 10px 20px 10px 20px;
   border: 2px solid #0FCDB0;
   border-radius:8px;
