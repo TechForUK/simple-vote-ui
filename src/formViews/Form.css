@@ -1,4 +1,36 @@
 .Form {
   display: flex;
   flex-direction: column;
+  text-align: left;
+}
+
+.Form label {
+  color: #888888;
+  margin: 6px;
+}
+
+.Form label>span{
+  min-width: 400px;
+  display: inline-block;
+}
+
+.Form label input {
+  padding: 10px 20px 10px 20px;
+  border: 2px solid #0FCDB0;
+  border-radius:8px;
+  color: #000000;
+  font-size: 16px;
+  font-weight:bold;
+  margin-left:20px;
+}
+
+.Form input[type=submit] {
+  padding: 20px 30px 20px 30px;
+  border: 2px solid #0FCDB0;
+  border-radius: 8px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px;
+  background: rgb(33, 255, 222);
 }
