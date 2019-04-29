@@ -12,7 +12,7 @@ function Welcome({ switchView }) {
       <img src={logo} className="image-logo"/>
       <div className="welcome-row-1">
         <img src={image_timer} className="image-timer"/>
-        <p className="primary-text">Register to vote in under 5 mins!</p>
+        <p className="primary-text">Sign up to vote in under 5 mins!</p>
         <p className="secondary-text">Less than the time it take to make a cup of tea</p>
       </div>
       <div>
@@ -29,9 +29,7 @@ function Welcome({ switchView }) {
           <p className="secondary-text">We send it for you!</p>
         </p>
       </div>
-      <p>
-      No printing, no posting, no fuss!
-      </p>
+      <p className="primary-text">No printing, no posting, no fuss!</p>
       <button type="button" onClick={() => switchView('typeOfVoter')}>Start Now ...</button>
     </Fragment>
   );
