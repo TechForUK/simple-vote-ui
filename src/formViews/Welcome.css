@@ -1,0 +1,27 @@
+.image-timer {
+    height:150px;
+}
+.image-logo {
+    height:100px;
+    margin-bottom:40px;
+}
+
+.image-row-2 {
+    height:80px;
+}
+
+.primary-text {
+    color:#000;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.secondary-text {
+    color:#000;
+    font-size: 16px;
+}
+
+.welcome-row-2-element {
+    display: inline-block;
+    margin: 20px;
+}
