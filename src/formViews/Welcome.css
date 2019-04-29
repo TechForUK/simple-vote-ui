@@ -1,0 +1,19 @@
+.image_timer {
+    height:150px;
+}
+.image_logo {
+    height:100px;
+    margin-bottom:40px;
+}
+
+.primary_text {
+    color:#000;
+    font-size: 22px;
+    font-weight: bold;
+
+}
+
+.secondary_text {
+    color:#000;
+    font-size: 16px;
+}
