@@ -7,27 +7,27 @@ function TypeOfVoter({ formData, updateData, submitData }) {
     <form className="Form" onSubmit={submitData}>
       <label htmlFor="firstName">
         <span>First Name(s)</span>
-        <input id="firstName" name="firstName" type="text" value={formData.firstName} onChange={updateData} />
+        <input id="firstName" name="firstName" type="text" autocomplete="given-name" value={formData.firstName} onChange={updateData} />
       </label>
       <label htmlFor="surname">
         <span>Surname</span>
-        <input id="surname" name="surname" type="text" value={formData.surname} onChange={updateData} />
+        <input id="surname" name="surname" type="text"  autocomplete="family-name" value={formData.surname} onChange={updateData} />
       </label>
       <label htmlFor="firstLineAddress">
         <span>First line of address</span>
-        <input id="firstLineAddress" name="firstLineAddress" type="text" value={formData.firstLineAddress} onChange={updateData} />
+        <input id="firstLineAddress" name="firstLineAddress" type="text" autocomplete="section-main address-line1" value={formData.firstLineAddress} onChange={updateData} />
       </label>
       <label htmlFor="secondLineAddress">
         <span>Second line of address</span>
-        <input id="secondLineAddress" name="secondLineAddress" type="text" value={formData.secondLineAddress} onChange={updateData} />
+        <input id="secondLineAddress" name="secondLineAddress" type="text" autocomplete="section-main address-line2" value={formData.secondLineAddress} onChange={updateData} />
       </label>
       <label htmlFor="postcode">
         <span>Postcode</span>
-        <input id="postcode" name="postcode" type="text" value={formData.postcode} onChange={updateData} />
+        <input id="postcode" name="postcode" type="text" autocomplete="section-main postal-code" value={formData.postcode} onChange={updateData} />
       </label>
       <label htmlFor="city">
       <span>City/Town</span>
-        <input id="city" name="city" type="text" value={formData.city} onChange={updateData} />
+        <input id="city" name="city" type="text" autocomplete="" value={formData.city} onChange={updateData} />
       </label>
       <label htmlFor="differentAddress">
       <span>I live at another address</span>
@@ -35,11 +35,11 @@ function TypeOfVoter({ formData, updateData, submitData }) {
       </label>
       <label htmlFor="email">
       <span>Email</span>
-        <input id="email" name="email" type="text" value={formData.email} onChange={updateData} />
+        <input id="email" name="email" type="text" autocomplete="email" value={formData.email} onChange={updateData} />
       </label>
       <label htmlFor="nationality">
       <span>Nationality (If you have more than one, include all)</span>
-        <input id="nationality" name="nationality" type="text" value={formData.nationality} onChange={updateData} />
+        <input id="nationality" name="nationality" type="text" autocomplete="country-name" value={formData.nationality} onChange={updateData} />
       </label>
       <label htmlFor="movedHouse">
       <span>Have you moved house in the last 12 months?</span>
@@ -49,15 +49,15 @@ function TypeOfVoter({ formData, updateData, submitData }) {
         <Fragment>
           <label htmlFor="oldAddressFirstLineAddress">
           <span>First line of address</span>
-            <input id="oldAddressFirstLineAddress" name="oldAddressFirstLineAddress" type="text" value={formData.oldAddressFirstLineAddress} onChange={updateData} />
+            <input id="oldAddressFirstLineAddress" name="oldAddressFirstLineAddress" type="text" autocomplete="section-old address-line1" value={formData.oldAddressFirstLineAddress} onChange={updateData} />
           </label>
           <label htmlFor="oldAddressSecondLineAddress">
           <span>Second line of address</span>
-            <input id="oldAddressSecondLineAddress" name="oldAddressSecondLineAddress" type="text" value={formData.oldAddressSecondLineAddress} onChange={updateData} />
+            <input id="oldAddressSecondLineAddress" name="oldAddressSecondLineAddress" type="text" autocomplete="section-old address-line2" value={formData.oldAddressSecondLineAddress} onChange={updateData} />
           </label>
           <label htmlFor="oldAddressPostcode">
           <span>Postcode</span>
-            <input id="oldAddressPostcode" name="oldAddressPostcode" type="text" value={formData.oldAddressPostcode} onChange={updateData} />
+            <input id="oldAddressPostcode" name="oldAddressPostcode" type="text" autocomplete="section-old postal-code" value={formData.oldAddressPostcode} onChange={updateData} />
           </label>
           <label htmlFor="oldAddressCity">
           <span>City/Town</span>
@@ -71,7 +71,7 @@ function TypeOfVoter({ formData, updateData, submitData }) {
       ) : null}
       <label htmlFor="dateOfBirth">
       <span>Date of birth</span>
-        <input id="dateOfBirth" name="dateOfBirth" type="date" value={formData.dateOfBirth} onChange={updateData} />
+        <input id="dateOfBirth" name="dateOfBirth" type="date"  autocomplete="bday" value={formData.dateOfBirth} onChange={updateData} />
       </label>
       <label htmlFor="nin">
       <span>National insurance number</span>
