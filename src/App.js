@@ -7,6 +7,10 @@ import './App.css';
 
 const server = 'http://127.0.0.1:4000';
 
+function twoDigitFormat(number) {
+  return (`0${number}`).slice(-2);
+}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -41,7 +45,7 @@ class App extends React.Component {
         postalVote: true,
         currentDate: (() => {
           const currentDate = new Date();
-          return `${currentDate.getFullYear()}-${currentDate.getMonth() + 1}-${currentDate.getDate()}`;
+          return `${currentDate.getFullYear()}-${twoDigitFormat(currentDate.getMonth() + 1)}-${twoDigitFormat(currentDate.getDate())}`;
         })(),
         registeredAtHome: false,
         homeCountryConstituency: '',
