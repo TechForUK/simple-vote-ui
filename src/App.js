@@ -5,7 +5,7 @@ import RenderingController from './RenderingController';
 
 import './App.css';
 
-const server = '';
+const server = 'http://127.0.0.1:4000';
 
 class App extends React.Component {
   constructor(props) {
@@ -49,6 +49,7 @@ class App extends React.Component {
         postalVoteElectionDate: '',
         postalVoteFrom: '',
         postalVoteTo: '',
+        signature: '',
       },
     };
 
@@ -68,7 +69,7 @@ class App extends React.Component {
     const { name } = target;
     const { formData } = this.state;
 
-    this.setState({
+    return this.setState({
       formData: {
         ...formData,
         [name]: value,
@@ -76,8 +77,7 @@ class App extends React.Component {
     });
   }
 
-  submitData(e) {
-    e.preventDefault();
+  submitData() {
     const { formData } = this.state;
     axios.post(`${server}/register`, { userData: { ...formData } }).then((response) => {
       console.log(response);

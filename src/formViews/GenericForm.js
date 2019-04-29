@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 
 import './Form.css';
 
-function TypeOfVoter({ formData, updateData, submitData }) {
+function TypeOfVoter({ formData, updateData, switchView }) {
   return (
-    <form className="Form" onSubmit={submitData}>
+    <form className="Form">
       <label htmlFor="firstName">
         <span>First Name(s)</span>
         <input id="firstName" name="firstName" type="text" value={formData.firstName} onChange={updateData} />
@@ -131,7 +131,7 @@ function TypeOfVoter({ formData, updateData, submitData }) {
           ) : null}
         </Fragment>
       ) : null}
-      <input type="submit" value="Submit" />
+      <input type="button" value="Next" className="NextButton" onClick={() => switchView('signaturePage')} />
     </form>
   );
 }
