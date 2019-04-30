@@ -15,7 +15,7 @@ function Welcome({ switchView }) {
         <p className="primary-text">Sign up to vote in under 5 mins!</p>
         <p className="secondary-text">Less than the time it take to make a cup of tea</p>
       </div>
-      <div>
+      <div className="welcome-row-2">
         <p className="welcome-row-2-element">
           <img alt="filled out form" src={imageFillForm} className="image-row-2" />
           <span className="secondary-text">Fill in your details</span>
