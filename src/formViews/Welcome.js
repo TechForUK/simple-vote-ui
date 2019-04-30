@@ -31,7 +31,6 @@ function Welcome({ switchView }) {
         </p>
       </div>
       <p className="primary-text">No printing, no posting, no fuss!</p>
-      
     </Fragment>
   );
 }
