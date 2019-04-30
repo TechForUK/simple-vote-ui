@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-
 import './Form.css';
 
 function TypeOfVoter({ formData, updateData, switchView }) {
@@ -77,6 +76,7 @@ function TypeOfVoter({ formData, updateData, switchView }) {
         <span>National insurance number</span>
         <input id="nin" name="nin" type="text" value={formData.nin} onChange={updateData} />
       </label>
+      
       <label htmlFor="changedName" className="Label-SameLine">
         <input id="changedName" name="changedName" type="checkbox" checked={formData.changedName} onChange={updateData} />
         <span>I have changed my name</span>
@@ -117,6 +117,7 @@ function TypeOfVoter({ formData, updateData, switchView }) {
               <input id="postalVoteElectionDate" name="postalVoteElectionDate" type="date" value={formData.postalVoteElectionDate} onChange={updateData} />
             </label>
           ) : null}
+          
           {formData.postalVoteOption === 'timePeriod' ? (
             <Fragment>
               <label htmlFor="postalVoteFrom">

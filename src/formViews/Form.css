@@ -22,10 +22,10 @@
 .Form label input {
   padding: 8px 16px 8px 16px;
   border: 2px solid #0FCDB0;
-  border-radius:8px;
+  border-radius: 8px;
   color: #000000;
   font-size: 16px;
-  font-weight:bold;
+  font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
   box-sizing: border-box;
 }
@@ -35,24 +35,24 @@
 }
 
 .Form input[type=checkbox] {
-  width:48px;
-  height:48px;
+  width: 48px;
+  height: 48px;
   border-radius: 0px;
 }
 
 .Form input[type=radio] {
-  width:48px;
-  height:48px;
+  width: 48px;
+  height: 48px;
 }
 
 .Form input[type=date] {
   width: 100%;
   padding: 8px 16px 8px 16px;
   border: 2px solid #0FCDB0;
-  border-radius:8px;
+  border-radius: 8px;
   color: #000000;
   font-size: 16px;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .NextButton {
@@ -63,5 +63,5 @@
   font-size: 32px;
   font-weight: bold;
   margin: 16px;
-  background:#0FCDB0
+  background: #0FCDB0
 }

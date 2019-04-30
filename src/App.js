@@ -11,6 +11,7 @@ function twoDigitFormat(number) {
   return (`0${number}`).slice(-2);
 }
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -54,12 +55,14 @@ class App extends React.Component {
         postalVoteFrom: '',
         postalVoteTo: '',
         signature: '',
+
       },
     };
 
     this.updateData = this.updateData.bind(this);
     this.submitData = this.submitData.bind(this);
     this.switchView = this.switchView.bind(this);
+
   }
 
   // For debugging purposes; remove this later
