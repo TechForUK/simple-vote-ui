@@ -1,5 +1,9 @@
 .SignaturePad {
   border: 1px solid #000;
+  display:block;
+  width:100%;
+  max-width:500px;
+  /* height: 200px; */
 }
 
 .RevisedUserDetails {

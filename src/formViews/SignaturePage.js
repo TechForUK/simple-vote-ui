@@ -51,7 +51,7 @@ class SignaturePage extends React.Component {
           <h3>You need to sign the form before you can proceed.</h3>
         ) : null}
         <div className="SignaturePad">
-          <SignaturePad ref={(ref) => { this.signaturePad = ref; }} />
+          <SignaturePad redrawOnResize ref={(ref) => { this.signaturePad = ref; }}  />
         </div>
         <button
           type="button"
