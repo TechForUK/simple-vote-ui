@@ -26,10 +26,27 @@ class SignaturePage extends React.Component {
 
   render() {
     const { signForm } = this;
+    const { formData } = this.props;
     const { emptySignature } = this.state;
     return (
       <Fragment>
-        <h1>Sign here</h1>
+        <h1>You are submitting:</h1>
+        <ul className="RevisedUserDetails">
+          {
+            Object.keys(formData)
+              .filter(key => formData[key].length)
+              .map(key => (
+                <li key={key}>
+                  <b>
+                    {key}
+                    :&nbsp;
+                  </b>
+                  {formData[key]}
+                </li>
+              ))
+            }
+        </ul>
+        <h2>Please sign:</h2>
         {emptySignature ? (
           <h3>You need to sign the form before you can proceed.</h3>
         ) : null}

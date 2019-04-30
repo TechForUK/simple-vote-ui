@@ -1,3 +1,7 @@
 .SignaturePad {
   border: 1px solid #000;
 }
+
+.RevisedUserDetails {
+  list-style: none;
+}
