@@ -15,6 +15,7 @@ function Welcome({ switchView }) {
         <p className="primary-text">Sign up to vote in under 5 mins!</p>
         <p className="secondary-text">Less than the time it take to make a cup of tea</p>
       </div>
+      <button type="button" onClick={() => switchView('typeOfVoter')}>Start Now</button>
       <div className="welcome-row-2">
         <p className="welcome-row-2-element">
           <img alt="filled out form" src={imageFillForm} className="image-row-2" />
@@ -30,7 +31,7 @@ function Welcome({ switchView }) {
         </p>
       </div>
       <p className="primary-text">No printing, no posting, no fuss!</p>
-      <button type="button" onClick={() => switchView('typeOfVoter')}>Start Now ...</button>
+      
     </Fragment>
   );
 }

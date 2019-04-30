@@ -6,7 +6,6 @@ import RenderingController from './RenderingController';
 import './App.css';
 
 const server = 'http://127.0.0.1:4000';
-const URL = 'https://wheredoivote.co.uk/api/beta/postcode/';
 
 function twoDigitFormat(number) {
   return (`0${number}`).slice(-2);
@@ -56,17 +55,13 @@ class App extends React.Component {
         postalVoteFrom: '',
         postalVoteTo: '',
         signature: '',
-        electoralOffice: {
-          name: '',
-          email: '',
-        },
+
       },
     };
 
     this.updateData = this.updateData.bind(this);
     this.submitData = this.submitData.bind(this);
     this.switchView = this.switchView.bind(this);
-    this.lookupElectoralOffice = this.lookupElectoralOffice.bind(this);
 
   }
 
@@ -102,29 +97,8 @@ class App extends React.Component {
     this.setState({ view: newView });
   }
 
-  // todo .. module
-  lookupElectoralOffice() {
-    const { formData } = this.state;
-    const { setState } = this;
-    if (formData.postcode) {
-      axios.get(URL + formData.postcode + ".json")
-      .then( (response) => {
-        console.log(response)
-        this.setState({
-          formData: {
-            ...formData,
-            electoralOffice: { name: response.data.council.name, email:  response.data.council.email },
-          },
-        })
-      });
-    } else {
-      alert('Please enter postcode');
-    }
-  }
-
-
   render() {
-    const { updateData, submitData, switchView, lookupElectoralOffice } = this;
+    const { updateData, submitData, switchView } = this;
     const { view, formData } = this.state;
 
     return (
@@ -136,7 +110,6 @@ class App extends React.Component {
             updateData={updateData}
             submitData={submitData}
             switchView={switchView}
-            lookupElectoralOffice={lookupElectoralOffice}
           />
         </div>
         <div className="imprint">Promoted by Best for Britain, the campaign name of UK-EU OPEN POLICY LIMITED registered at International House, 24 Holborn Viaduct, London, EC1A 2BN. Best for Britain is registered with The Electoral Commission.</div>

@@ -8,3 +8,7 @@
 .RevisedUserDetails {
   list-style: none;
 }
+
+.ElectoralOffice{
+  min-height:64px;
+}
