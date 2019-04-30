@@ -18,6 +18,7 @@ class SignaturePage extends React.Component {
         phone: '',
         email: '',
         loaded: false,
+        error: false,
       },
       formData: props.formData,
     };
@@ -43,17 +44,38 @@ class SignaturePage extends React.Component {
 
   async lookupElectoralOffice() {
     const { postcode } = this.state.formData;
-    const response = await axios.get(URL + `${postcode}.json`);
-    this.setState({
-      electoralOffice: {
-        name: response.data.council.name,
-        email: response.data.council.email,
-        phone: response.data.council.phone,
-        address: response.data.council.address,
-        postcode: response.data.council.postcode,
-        loaded: true,
-      },
-    });
+    const { electoralOffice } = this.state;
+    try {
+      const response = await axios.get(URL + `${postcode}.json`)
+        .catch((e) => {
+          this.setState({
+            electoralOffice: {
+              ...electoralOffice,
+              loaded: true,
+              error: true,
+            },
+          });
+        });
+
+      this.setState({
+        electoralOffice: {
+          name: response.data.council.name,
+          email: response.data.council.email,
+          phone: response.data.council.phone,
+          address: response.data.council.address,
+          postcode: response.data.council.postcode,
+          loaded: true,
+        },
+      });
+    } catch (e) {
+      this.setState({
+        electoralOffice: {
+          ...electoralOffice,
+          loaded: true,
+          error: true,
+        },
+      });
+    }
   }
 
   render() {
@@ -76,7 +98,7 @@ class SignaturePage extends React.Component {
                   {formData[key]}
                 </li>
               ))
-            }
+          }
         </ul>
         <h2>Please sign:</h2>
         {emptySignature ? (
@@ -89,7 +111,7 @@ class SignaturePage extends React.Component {
           {electoralOffice.loaded ? (
             <h2>
               Your electoral office email is:
-              {electoralOffice.email}
+              {electoralOffice.error ? 'Error' : electoralOffice.email }
             </h2>
           ) : <Spinner />}
         </div>

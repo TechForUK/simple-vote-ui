@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
+import imageLoading from './img/spinner-frame-4.png';
 import './Spinner.css';
 
 function Spinner() {
   return (
     <Fragment>
-      <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      <img src={imageLoading} alt="Loading" className="image" />
     </Fragment>
   );
 }
