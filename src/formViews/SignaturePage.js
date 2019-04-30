@@ -20,7 +20,6 @@ class SignaturePage extends React.Component {
         loaded: false,
         error: false,
       },
-      formData: props.formData,
     };
 
     this.signForm = this.signForm.bind(this);
@@ -43,19 +42,10 @@ class SignaturePage extends React.Component {
   }
 
   async lookupElectoralOffice() {
-    const { postcode } = this.state.formData;
+    const { postcode } = this.props.formData;
     const { electoralOffice } = this.state;
     try {
       const response = await axios.get(URL + `${postcode}.json`)
-        .catch((e) => {
-          this.setState({
-            electoralOffice: {
-              ...electoralOffice,
-              loaded: true,
-              error: true,
-            },
-          });
-        });
 
       this.setState({
         electoralOffice: {
@@ -111,7 +101,7 @@ class SignaturePage extends React.Component {
           {electoralOffice.loaded ? (
             <h2>
               Your electoral office email is:
-              {electoralOffice.error ? 'Error' : electoralOffice.email }
+              {electoralOffice.error ? 'Error' : electoralOffice.email}
             </h2>
           ) : <Spinner />}
         </div>
