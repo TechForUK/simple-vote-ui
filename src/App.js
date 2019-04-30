@@ -6,10 +6,18 @@ import RenderingController from './RenderingController';
 import './App.css';
 
 const server = 'http://127.0.0.1:4000';
+const URL = 'https://wheredoivote.co.uk/api/beta/postcode/';
 
 function twoDigitFormat(number) {
   return (`0${number}`).slice(-2);
 }
+
+// todo .. module
+function lookupElectoralOffice(postcode) {
+  return axios.get(URL+postcode+".json")
+      .catch((error)=>console.log(error))
+}
+//const multiplyES6 = (x, y) =>  { x * y} ;
 
 class App extends React.Component {
   constructor(props) {
@@ -93,6 +101,8 @@ class App extends React.Component {
   switchView(newView) {
     this.setState({ view: newView });
   }
+
+
 
   render() {
     const { updateData, submitData, switchView } = this;
