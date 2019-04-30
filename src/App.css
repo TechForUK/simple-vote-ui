@@ -24,14 +24,14 @@
 }
 
 button {
-  padding: 20px 30px 20px 30px;
+  padding: 32px 64px 32px 64px;
   border: 2px solid #0FCDB0;
   border-radius:8px;
-  color: #000000;
-  font-size: 16px;
+  color: #ffffff;
+  font-size:32px;
   font-weight:bold;
-  margin: 10px;
-  background: rgb(33, 255, 222);
+  margin: 16px;
+  background: #0FCDB0;
 }
 
 .imprint {
