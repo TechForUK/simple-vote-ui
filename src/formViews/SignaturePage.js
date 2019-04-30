@@ -43,7 +43,6 @@ class SignaturePage extends React.Component {
 
   async lookupElectoralOffice() {
     const { postcode } = this.state.formData;
-    // const { setState } = this;
     const response = await axios.get(URL + `${postcode}.json`);
     this.setState({
       electoralOffice: {
