@@ -22,6 +22,7 @@ function RenderingController({
   updateData,
   submitData,
   switchView,
+  lookupElectoralOffice,
 }) {
   const CurrentView = views[view];
 
@@ -32,6 +33,7 @@ function RenderingController({
         updateData={updateData}
         submitData={submitData}
         switchView={switchView}
+        lookupElectoralOffice={lookupElectoralOffice}
       />
     </Fragment>
   );

@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react';
-
 import './Form.css';
 
-function TypeOfVoter({ formData, updateData, switchView }) {
+function TypeOfVoter({ formData, updateData, switchView, lookupElectoralOffice }) {
   return (
     <form className="Form">
       <label htmlFor="firstName">
@@ -77,6 +76,10 @@ function TypeOfVoter({ formData, updateData, switchView }) {
         <span>National insurance number</span>
         <input id="nin" name="nin" type="text" value={formData.nin} onChange={updateData} />
       </label>
+      <label htmlFor="electoralOffice">
+        <span>Electoral Office</span>
+        <input id="electoralOffice" name="electoralOffice" type="text" value={formData.electoralOffice.name} onChange={updateData} readOnly />
+      </label>
       <label htmlFor="changedName" className="Label-SameLine">
         <input id="changedName" name="changedName" type="checkbox" checked={formData.changedName} onChange={updateData} />
         <span>I have changed my name</span>
@@ -117,6 +120,7 @@ function TypeOfVoter({ formData, updateData, switchView }) {
               <input id="postalVoteElectionDate" name="postalVoteElectionDate" type="date" value={formData.postalVoteElectionDate} onChange={updateData} />
             </label>
           ) : null}
+          
           {formData.postalVoteOption === 'timePeriod' ? (
             <Fragment>
               <label htmlFor="postalVoteFrom">
@@ -132,6 +136,7 @@ function TypeOfVoter({ formData, updateData, switchView }) {
         </Fragment>
       ) : null}
       <input type="button" value="Next" className="NextButton" onClick={() => switchView('signaturePage')} />
+      <input type="button" value="Check" className="NextButton" onClick={() => lookupElectoralOffice()} />
     </form>
   );
 }
