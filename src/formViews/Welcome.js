@@ -8,7 +8,7 @@ import './Welcome.css';
 
 function Welcome({ switchView }) {
   return (
-    <Fragment >
+    <Fragment>
       <img alt="logo" src={logo} className="image-logo" />
       <div className="welcome-row-1">
         <img alt="timer" src={imageTimer} className="image-timer" />
