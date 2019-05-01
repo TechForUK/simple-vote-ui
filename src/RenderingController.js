@@ -71,7 +71,7 @@ const ProtectedRoute = ({ render, shouldRedirect, ...rest }) => (
           : (
             <Redirect
               to={{
-                pathname: '/typeOfVoter',
+                pathname: '/typeOfVoter/',
                 state: { from: props.location },
               }}
             />
