@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import './Form.css';
 
-function TypeOfVoter({ formData, updateData, switchView }) {
+function EuForm({ formData, updateData, switchView }) {
   return (
     <form className="Form">
       <label htmlFor="firstName">
@@ -126,7 +126,7 @@ function TypeOfVoter({ formData, updateData, switchView }) {
             <input id="previousName" name="previousName" type="text" value={formData.previousName} onChange={updateData} />
           </label>
           <label htmlFor="dateOfNameChange">
-            <span>Date of birth:</span>
+            <span>Date of name change:</span>
             <input id="dateOfNameChange" name="dateOfNameChange" type="date" value={formData.dateOfNameChange} onChange={updateData} />
           </label>
         </Fragment>
@@ -174,4 +174,4 @@ function TypeOfVoter({ formData, updateData, switchView }) {
   );
 }
 
-export default TypeOfVoter;
+export default EuForm;

@@ -65,3 +65,7 @@
   margin: 16px;
   background:#0FCDB0
 }
+
+.Error {
+  border-color: red !important;
+}
