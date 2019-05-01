@@ -153,23 +153,23 @@ class GenericForm extends React.Component {
         </label>
         {formData.movedHouse ? (
           <Fragment>
-            <label htmlFor="oldAddressFirstLineAddress">
+            <label htmlFor="oldAddressFirstLineAddress" className="IndentedSection">
               <span>First line of address</span>
               <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressFirstLineAddress') })} id="oldAddressFirstLineAddress" name="oldAddressFirstLineAddress" type="text" value={formData.oldAddressFirstLineAddress} onChange={updateData} />
             </label>
-            <label htmlFor="oldAddressSecondLineAddress">
+            <label htmlFor="oldAddressSecondLineAddress" className="IndentedSection">
               <span>Second line of address</span>
               <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressSecondLineAddress') })} id="oldAddressSecondLineAddress" name="oldAddressSecondLineAddress" type="text" value={formData.oldAddressSecondLineAddress} onChange={updateData} />
             </label>
-            <label htmlFor="oldAddressPostcode">
+            <label htmlFor="oldAddressPostcode" className="IndentedSection">
               <span>Postcode</span>
               <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressPostcode') })} id="oldAddressPostcode" name="oldAddressPostcode" type="text" value={formData.oldAddressPostcode} onChange={updateData} />
             </label>
-            <label htmlFor="oldAddressCity">
+            <label htmlFor="oldAddressCity" className="IndentedSection">
               <span>City/Town</span>
               <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressCity') })} id="oldAddressCity" name="oldAddressCity" type="text" value={formData.oldAddressCity} onChange={updateData} />
             </label>
-            <label htmlFor="registeredAsOverseasVoter" className="Label-SameLine">
+            <label htmlFor="registeredAsOverseasVoter" className="Label-SameLine IndentedSection">
               <input id="registeredAsOverseasVoter" name="registeredAsOverseasVoter" type="checkbox" checked={formData.registeredAsOverseasVoter} onChange={updateData} />
               <span>I was registered in the UK as an overseas voter</span>
             </label>
@@ -189,11 +189,11 @@ class GenericForm extends React.Component {
         </label>
         {formData.changedName ? (
           <Fragment>
-            <label htmlFor="previousName">
+            <label htmlFor="previousName" className="IndentedSection">
               <span>Most recent previous name</span>
               <input className={classNames({ Error: fieldsWithErrors.includes('previousName') })} id="previousName" name="previousName" type="text" value={formData.previousName} onChange={updateData} />
             </label>
-            <label htmlFor="dateOfNameChange">
+            <label htmlFor="dateOfNameChange" className="IndentedSection">
               <span>Date of name change</span>
               <input className={classNames({ Error: fieldsWithErrors.includes('dateOfNameChange') })} id="dateOfNameChange" name="dateOfNameChange" type="date" value={formData.dateOfNameChange} onChange={updateData} />
             </label>
@@ -205,31 +205,31 @@ class GenericForm extends React.Component {
         </label>
         {formData.postalVote ? (
           <Fragment>
-            <label htmlFor="indefintiely" className="Label-SameLine">
+            <label htmlFor="indefintiely" className="Label-SameLine IndentedSection">
               <input id="indefintiely" name="postalVoteOption" type="radio" value="indefintiely" checked={formData.postalVoteOption === 'indefintiely'} onChange={updateData} />
               <span>Until further notice</span>
             </label>
-            <label htmlFor="specificElection" className="Label-SameLine">
+            <label htmlFor="specificElection" className="Label-SameLine IndentedSection">
               <input id="specificElection" name="postalVoteOption" type="radio" value="specificElection" checked={formData.postalVoteOption === 'specificElection'} onChange={updateData} />
               <span>For elections to be held on a specific date</span>
             </label>
-            <label htmlFor="timePeriod" className="Label-SameLine">
+            <label htmlFor="timePeriod" className="Label-SameLine IndentedSection">
               <input id="timePeriod" name="postalVoteOption" type="radio" value="timePeriod" checked={formData.postalVoteOption === 'timePeriod'} onChange={updateData} />
               <span>For a period of time</span>
             </label>
             {formData.postalVoteOption === 'specificElection' ? (
-              <label htmlFor="postalVoteElectionDate">
+              <label htmlFor="postalVoteElectionDate" className="IndentedSection">
                 <span>Elections on</span>
                 <input id="postalVoteElectionDate" name="postalVoteElectionDate" type="date" value={formData.postalVoteElectionDate} onChange={updateData} />
               </label>
             ) : null}
             {formData.postalVoteOption === 'timePeriod' ? (
               <Fragment>
-                <label htmlFor="postalVoteFrom">
+                <label htmlFor="postalVoteFrom" className="IndentedSection">
                   <span>From</span>
                   <input id="postalVoteFrom" name="postalVoteFrom" type="date" value={formData.postalVoteFrom} onChange={updateData} />
                 </label>
-                <label htmlFor="postalVoteTo">
+                <label htmlFor="postalVoteTo" className="IndentedSection">
                   <span>To</span>
                   <input id="postalVoteTo" name="postalVoteTo" type="date" value={formData.postalVoteTo} onChange={updateData} />
                 </label>
