@@ -32,6 +32,7 @@ button, .Button {
   font-weight:bold;
   margin: 16px;
   background: #0FCDB0;
+  text-decoration: none;
 }
 
 .imprint {

@@ -1,13 +1,16 @@
 .Form {
-  display: flex;
-  flex-direction: column;
   text-align: left;
+  max-width: 600px;
+}
+
+.Form .IndentedSection {
+  padding-left: 64px;
   max-width: 600px;
 }
 
 .Form label {
   width: 100%;
-  color: #888888;
+  color: #545454;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,10 +37,18 @@
   width: 100%;
 }
 
+.IndentedSection input[type=text]{
+  width: 90%;
+}
+
 .Form input[type=checkbox] {
   width: 48px;
   height: 48px;
   border-radius: 0px;
+}
+
+.IndentedSection input[type=checkbox]{
+  width: 20%;
 }
 
 .Form input[type=radio] {
@@ -56,6 +67,8 @@
 }
 
 .NextButton {
+  display: flex;
+  flex-direction: column;
   padding: 32px 64px 32px 64px;
   border: 2px solid #0FCDB0;
   border-radius: 8px;
@@ -64,6 +77,8 @@
   font-weight: bold;
   margin: 16px;
   background:#0FCDB0;
+  text-align: center;
+  text-decoration: none;
 }
 
 .Error {
