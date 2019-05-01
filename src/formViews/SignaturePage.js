@@ -109,7 +109,7 @@ class SignaturePage extends React.Component {
         <div className="SignaturePad">
           <SignaturePad redrawOnResize ref={(ref) => { this.signaturePad = ref; }} />
         </div>
-        <button type="button" className="SignaturePadReset" onClick={resetSignature} >Clear signature</button>
+        <button type="button" className="SignaturePadReset" onClick={resetSignature}>Clear signature</button>
         <div className="ElectoralOffice">
           {electoralOffice.loaded ? (
             <h2>
