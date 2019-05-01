@@ -7,7 +7,7 @@ import axios from 'axios';
 import Spinner from '../Spinner';
 import './SignaturePage.css';
 
-const URL = 'https://wheredoivote.co.uk/api/beta/postcode/';
+const URL = 'https://wheredoivote.co.uk/api/beta/postcode';
 
 class SignaturePage extends React.Component {
   constructor(props) {
@@ -46,10 +46,11 @@ class SignaturePage extends React.Component {
   }
 
   async lookupElectoralOffice() {
-    const { postcode } = this.props.formData;
+    const { formData } = this.props;
+    const { postcode } = formData;
     const { electoralOffice } = this.state;
     try {
-      const response = await axios.get(URL + `${postcode}.json`)
+      const response = await axios.get(`${URL}/${postcode}.json`);
 
       this.setState({
         electoralOffice: {
