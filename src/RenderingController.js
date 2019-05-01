@@ -7,6 +7,8 @@ import GenericForm from './formViews/GenericForm';
 import EuForm from './formViews/EuForm';
 import SignaturePage from './formViews/SignaturePage';
 import ThankYou from './ThankYou';
+import Terms from './Terms';
+import Privacy from './Privacy';
 
 function RenderingController({
   formData,
@@ -55,6 +57,18 @@ function RenderingController({
           path="/thankYou/"
           exact
           render={() => <ThankYou />}
+        />
+        <Route
+          shouldRedirect={shouldRedirect}
+          path="/termsAndConditions"
+          exact
+          render={() => <Terms />}
+        />
+        <Route
+          shouldRedirect={shouldRedirect}
+          path="/privacy"
+          exact
+          render={() => <Privacy />}
         />
       </Router>
     </Fragment>
