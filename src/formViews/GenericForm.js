@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
 import './Form.css';
@@ -106,10 +107,10 @@ class GenericForm extends React.Component {
     return errors;
   }
 
-  advance() {
-    if (!this.validateForm().length) {
-      const { switchView } = this.props;
-      switchView('signaturePage');
+  advance(event) {
+    if (this.validateForm().length) {
+      event.preventDefault();
+      event.stopPropagation();
     }
   }
 
@@ -244,7 +245,13 @@ class GenericForm extends React.Component {
             ) : null}
           </Fragment>
         ) : null}
-        <input type="button" value="Next" className="NextButton" onClick={this.advance} />
+        <Link
+          className="NextButton"
+          to="/signaturePage/"
+          onClick={this.advance}
+        >
+          Next
+        </Link>
       </form>
     );
   }

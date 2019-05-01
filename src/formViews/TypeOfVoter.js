@@ -1,32 +1,27 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
-function TypeOfVoter({ updateData, switchView }) {
+function TypeOfVoter({ updateData }) {
   return (
     <Fragment>
-      <button
-        className="SegmentationButton"
-        type="button"
-        name="userType"
-        value="uk_citizen_in_uk"
-        onClick={(e) => {
-          updateData(e);
-          switchView('genericForm');
+      <Link
+        className="Button"
+        to="/genericForm/"
+        onClick={async () => {
+          await updateData({ target: { value: 'uk_citizen_in_uk', name: 'userType' } });
         }}
       >
-      I am a UK citizen living in the UK
-      </button>
-      <button
-        className="SegmentationButton"
-        type="button"
-        name="userType"
-        value="eu_citizen_in_uk"
-        onClick={(e) => {
-          updateData(e);
-          switchView('euCitizenForm');
+        I am a UK citizen living in the UK
+      </Link>
+      <Link
+        className="Button"
+        to="/euCitizenForm/"
+        onClick={async () => {
+          await updateData({ target: { value: 'eu_citizen_in_uk', name: 'userType' } });
         }}
       >
-      I am a EU citizen living in the UK
-      </button>
+        I am a EU citizen living in the UK
+      </Link>
     </Fragment>
   );
 }

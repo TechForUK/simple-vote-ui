@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+
 import imageTimer from './img/timer.png';
 import imageFillForm from './img/fill_form.png';
 import imageTick from './img/tick.png';
@@ -6,7 +8,7 @@ import imageMail from './img/mail.png';
 import logo from './img/logo.png';
 import './Welcome.css';
 
-function Welcome({ switchView }) {
+function Welcome() {
   return (
     <Fragment>
       <img alt="logo" src={logo} className="image-logo" />
@@ -15,7 +17,7 @@ function Welcome({ switchView }) {
         <p className="primary-text">Sign up to vote in under 5 mins!</p>
         <p className="secondary-text">Less than the time it take to make a cup of tea</p>
       </div>
-      <button type="button" onClick={() => switchView('typeOfVoter')}>Start Now</button>
+      <Link className="Button" to="/typeOfVoter/">Start Now</Link>
       <div className="welcome-row-2">
         <p className="welcome-row-2-element">
           <img alt="filled out form" src={imageFillForm} className="image-row-2" />

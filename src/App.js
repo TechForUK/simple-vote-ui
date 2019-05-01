@@ -16,8 +16,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      view: 'welcome',
       formData: {
+        userType: '',
         firstName: '',
         surname: '',
         firstLineAddress: '',
@@ -55,14 +55,11 @@ class App extends React.Component {
         postalVoteFrom: '',
         postalVoteTo: '',
         signature: '',
-
       },
     };
 
     this.updateData = this.updateData.bind(this);
     this.submitData = this.submitData.bind(this);
-    this.switchView = this.switchView.bind(this);
-
   }
 
   // For debugging purposes; remove this later
@@ -93,12 +90,8 @@ class App extends React.Component {
     });
   }
 
-  switchView(newView) {
-    this.setState({ view: newView });
-  }
-
   render() {
-    const { updateData, submitData, switchView } = this;
+    const { updateData, submitData } = this;
     const { view, formData } = this.state;
 
     return (
@@ -109,7 +102,6 @@ class App extends React.Component {
             formData={formData}
             updateData={updateData}
             submitData={submitData}
-            switchView={switchView}
           />
         </div>
         <div className="imprint">Promoted by Best for Britain, the campaign name of UK-EU OPEN POLICY LIMITED registered at International House, 24 Holborn Viaduct, London, EC1A 2BN. Best for Britain is registered with The Electoral Commission.</div>

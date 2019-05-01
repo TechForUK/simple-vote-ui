@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+
 import SignaturePad from 'react-signature-pad-wrapper';
 import axios from 'axios';
+
 import Spinner from '../Spinner';
 import './SignaturePage.css';
 
@@ -30,14 +33,15 @@ class SignaturePage extends React.Component {
     this.lookupElectoralOffice();
   }
 
-  async signForm() {
-    const { updateData, switchView, submitData } = this.props;
+  async signForm(event) {
+    const { updateData, submitData } = this.props;
     if (this.signaturePad.isEmpty()) {
+      event.preventDefault();
+      event.stopPropagation();
       this.setState({ emptySignature: true });
     } else {
       await updateData({ target: { value: this.signaturePad.toDataURL(), name: 'signature' } });
       submitData();
-      switchView('thankYou');
     }
   }
 
@@ -105,12 +109,13 @@ class SignaturePage extends React.Component {
             </h2>
           ) : <Spinner />}
         </div>
-        <button
-          type="button"
+        <Link
+          className="Button"
+          to="/thankYou/"
           onClick={signForm}
         >
-          Next
-        </button>
+          Sign
+        </Link>
       </Fragment>
     );
   }
