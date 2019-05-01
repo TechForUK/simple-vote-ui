@@ -164,19 +164,19 @@ class EuForm extends React.Component {
         </label>
         {formData.differentAddress ? (
           <Fragment>
-            <label htmlFor="firstLineCurrentAddress">
+            <label htmlFor="firstLineCurrentAddress" className="IndentedSection">
               <span>First line of current address:</span>
               <input className={classNames({ Error: fieldsWithErrors.includes('firstLineCurrentAddress') })} id="firstLineCurrentAddress" name="firstLineCurrentAddress" type="text" value={formData.firstLineCurrentAddress} onChange={updateData} />
             </label>
-            <label htmlFor="secondLineCurrentAddress">
+            <label htmlFor="secondLineCurrentAddress" className="IndentedSection">
               <span>Second line of current address:</span>
               <input className={classNames({ Error: fieldsWithErrors.includes('secondLineCurrentAddress') })} id="secondLineCurrentAddress" name="secondLineCurrentAddress" type="text" value={formData.secondLineCurrentAddress} onChange={updateData} />
             </label>
-            <label htmlFor="currentPostcode">
+            <label htmlFor="currentPostcode" className="IndentedSection">
               <span>Postcode of current address:</span>
               <input className={classNames({ Error: fieldsWithErrors.includes('currentPostcode') })} id="currentPostcode" name="currentPostcode" type="text" value={formData.currentPostcode} onChange={updateData} />
             </label>
-            <label htmlFor="currentCity">
+            <label htmlFor="currentCity" className="IndentedSection">
               <span>Current City/Town:</span>
               <input className={classNames({ Error: fieldsWithErrors.includes('currentCity') })} id="currentCity" name="currentCity" type="text" value={formData.currentCity} onChange={updateData} />
             </label>
@@ -192,7 +192,7 @@ class EuForm extends React.Component {
         </label>
         {formData.registeredAtHome ? (
           <Fragment>
-            <label htmlFor="homeCountryConstituency">
+            <label htmlFor="homeCountryConstituency" className="IndentedSection">
               <span>
                 Name of the locality or constituency where you
                 were last registered, as far as you know
@@ -215,23 +215,23 @@ class EuForm extends React.Component {
         </label>
         {formData.movedHouse ? (
           <Fragment>
-            <label htmlFor="oldAddressFirstLineAddress">
+            <label htmlFor="oldAddressFirstLineAddress" className="IndentedSection">
               <span>First line of address:</span>
               <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressFirstLineAddress') })} id="oldAddressFirstLineAddress" name="oldAddressFirstLineAddress" type="text" value={formData.oldAddressFirstLineAddress} onChange={updateData} />
             </label>
-            <label htmlFor="oldAddressSecondLineAddress">
+            <label htmlFor="oldAddressSecondLineAddress" className="IndentedSection">
               <span>Second line of address:</span>
               <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressSecondLineAddress') })} id="oldAddressSecondLineAddress" name="oldAddressSecondLineAddress" type="text" value={formData.oldAddressSecondLineAddress} onChange={updateData} />
             </label>
-            <label htmlFor="oldAddressPostcode">
+            <label htmlFor="oldAddressPostcode" className="IndentedSection">
               <span>Postcode:</span>
               <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressPostcode') })} id="oldAddressPostcode" name="oldAddressPostcode" type="text" value={formData.oldAddressPostcode} onChange={updateData} />
             </label>
-            <label htmlFor="oldAddressCity">
+            <label htmlFor="oldAddressCity" className="IndentedSection">
               <span>City/Town:</span>
               <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressCity') })} id="oldAddressCity" name="oldAddressCity" type="text" value={formData.oldAddressCity} onChange={updateData} />
             </label>
-            <label htmlFor="registeredAsOverseasVoter" className="Label-SameLine">
+            <label htmlFor="registeredAsOverseasVoter" className="Label-SameLine IndentedSection">
               <input id="registeredAsOverseasVoter" name="registeredAsOverseasVoter" type="checkbox" checked={formData.registeredAsOverseasVoter} onChange={updateData} />
               <span>I was registered in the UK as an overseas voter</span>
             </label>
@@ -267,31 +267,31 @@ class EuForm extends React.Component {
         </label>
         {formData.postalVote ? (
           <Fragment>
-            <label htmlFor="indefintiely" className="Label-SameLine">
+            <label htmlFor="indefintiely" className="Label-SameLine IndentedSection">
               <input id="indefintiely" name="postalVoteOption" type="radio" value="indefintiely" checked={formData.postalVoteOption === 'indefintiely'} onChange={updateData} />
               <span>Until further notice</span>
             </label>
-            <label htmlFor="specificElection" className="Label-SameLine">
+            <label htmlFor="specificElection" className="Label-SameLine IndentedSection">
               <input id="specificElection" name="postalVoteOption" type="radio" value="specificElection" checked={formData.postalVoteOption === 'specificElection'} onChange={updateData} />
               <span>For elections to be held on a specific date</span>
             </label>
-            <label htmlFor="timePeriod" className="Label-SameLine">
+            <label htmlFor="timePeriod" className="Label-SameLine IndentedSection">
               <input id="timePeriod" name="postalVoteOption" type="radio" value="timePeriod" checked={formData.postalVoteOption === 'timePeriod'} onChange={updateData} />
               <span>For a period of time</span>
             </label>
             {formData.postalVoteOption === 'specificElection' ? (
-              <label htmlFor="postalVoteElectionDate">
+              <label htmlFor="postalVoteElectionDate" className="IndentedSection">
                 <span>Elections on:</span>
                 <input className={classNames({ Error: fieldsWithErrors.includes('postalVoteElectionDate') })} id="postalVoteElectionDate" name="postalVoteElectionDate" type="date" value={formData.postalVoteElectionDate} onChange={updateData} />
               </label>
             ) : null}
             {formData.postalVoteOption === 'timePeriod' ? (
               <Fragment>
-                <label htmlFor="postalVoteFrom">
+                <label htmlFor="postalVoteFrom" className="IndentedSection">
                   <span>From:</span>
                   <input className={classNames({ Error: fieldsWithErrors.includes('postalVoteFrom') })} id="postalVoteFrom" name="postalVoteFrom" type="date" value={formData.postalVoteFrom} onChange={updateData} />
                 </label>
-                <label htmlFor="postalVoteTo">
+                <label htmlFor="postalVoteTo" className="IndentedSection">
                   <span>To:</span>
                   <input className={classNames({ Error: fieldsWithErrors.includes('postalVoteTo') })} id="postalVoteTo" name="postalVoteTo" type="date" value={formData.postalVoteTo} onChange={updateData} />
                 </label>
