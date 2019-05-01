@@ -9,6 +9,16 @@
   list-style: none;
 }
 
-.ElectoralOffice{
-  min-height:64px;
+.ElectoralOffice {
+  min-height: 64px;
+}
+
+.SignaturePadReset {
+  padding: 8px 16px 8px 16px;
+  border: 2px solid #b60000;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  background: #b60000;
 }

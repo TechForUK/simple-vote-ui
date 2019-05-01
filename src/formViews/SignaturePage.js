@@ -27,10 +27,17 @@ class SignaturePage extends React.Component {
 
     this.signForm = this.signForm.bind(this);
     this.lookupElectoralOffice = this.lookupElectoralOffice.bind(this);
+    this.resetSignature = this.resetSignature.bind(this);
   }
 
   componentDidMount() {
     this.lookupElectoralOffice();
+  }
+
+  resetSignature() {
+    if (!this.signaturePad.isEmpty()) {
+      this.signaturePad.clear();
+    }
   }
 
   async signForm(event) {
@@ -74,7 +81,7 @@ class SignaturePage extends React.Component {
   }
 
   render() {
-    const { signForm } = this;
+    const { signForm, resetSignature } = this;
     const { formData } = this.props;
     const { emptySignature, electoralOffice } = this.state;
     return (
@@ -102,6 +109,7 @@ class SignaturePage extends React.Component {
         <div className="SignaturePad">
           <SignaturePad redrawOnResize ref={(ref) => { this.signaturePad = ref; }} />
         </div>
+        <button type="button" className="SignaturePadReset" onClick={resetSignature} >Clear signature</button>
         <div className="ElectoralOffice">
           {electoralOffice.loaded ? (
             <h2>
