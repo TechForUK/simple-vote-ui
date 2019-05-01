@@ -15,9 +15,6 @@ const requiredFields = [
     field: 'firstLineAddress',
   },
   {
-    field: 'secondLineAddress',
-  },
-  {
     field: 'postcode',
   },
   {
@@ -31,11 +28,6 @@ const requiredFields = [
   },
   {
     field: 'oldAddressFirstLineAddress',
-    dependsOn: 'movedHouse',
-    toBe: true,
-  },
-  {
-    field: 'oldAddressSecondLineAddress',
     dependsOn: 'movedHouse',
     toBe: true,
   },
