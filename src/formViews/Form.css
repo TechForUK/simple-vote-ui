@@ -38,6 +38,10 @@
   width: 100%;
 }
 
+.Form input[type=email] {
+  width: 100%;
+}
+
 .Form input[type=checkbox] {
   width: 48px;
   height: 48px;
