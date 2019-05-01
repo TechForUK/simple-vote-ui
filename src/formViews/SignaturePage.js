@@ -7,6 +7,8 @@ import axios from 'axios';
 import Spinner from '../Spinner';
 import './SignaturePage.css';
 
+import imageReset from './img/close_black.png';
+
 const URL = 'https://wheredoivote.co.uk/api/beta/postcode/';
 
 class SignaturePage extends React.Component {
@@ -27,10 +29,18 @@ class SignaturePage extends React.Component {
 
     this.signForm = this.signForm.bind(this);
     this.lookupElectoralOffice = this.lookupElectoralOffice.bind(this);
+    this.resetSignature = this.resetSignature.bind(this);
   }
 
   componentDidMount() {
     this.lookupElectoralOffice();
+  }
+
+  resetSignature() {
+    if (!this.signaturePad.isEmpty()) {
+      this.signaturePad.clear();
+      this.setState({ emptySignature: true });
+    }
   }
 
   async signForm(event) {
@@ -73,7 +83,7 @@ class SignaturePage extends React.Component {
   }
 
   render() {
-    const { signForm } = this;
+    const { signForm, resetSignature } = this;
     const { formData } = this.props;
     const { emptySignature, electoralOffice } = this.state;
     return (
@@ -99,6 +109,7 @@ class SignaturePage extends React.Component {
           <h3>You need to sign the form before you can proceed.</h3>
         ) : null}
         <div className="SignaturePad">
+          <img src={imageReset} className="SignaturePadReset" alt="Reset" onClick={resetSignature} />
           <SignaturePad redrawOnResize ref={(ref) => { this.signaturePad = ref; }} />
         </div>
         <div className="ElectoralOffice">
