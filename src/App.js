@@ -42,7 +42,6 @@ class App extends React.Component {
         nin: '',
         changedName: '',
         previousName: '',
-        dateOfNameChange: '',
         postalVote: true,
         currentDate: (() => {
           const currentDate = new Date();
@@ -60,11 +59,6 @@ class App extends React.Component {
 
     this.updateData = this.updateData.bind(this);
     this.submitData = this.submitData.bind(this);
-  }
-
-  // For debugging purposes; remove this later
-  componentDidUpdate() {
-    console.log(this.state.formData);
   }
 
   updateData(event) {

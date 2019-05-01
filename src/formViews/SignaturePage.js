@@ -9,6 +9,48 @@ import './SignaturePage.css';
 
 const URL = 'https://wheredoivote.co.uk/api/beta/postcode';
 
+function formatVale(value) {
+  if (typeof value === 'string') {
+    return value;
+  }
+  return value ? 'Yes' : 'No';
+}
+
+const hrfFields = {
+  firstName: 'First name',
+  surname: 'Surname',
+  firstLineAddress: 'First line of address',
+  secondLineAddress: 'Second line of address',
+  postcode: 'Postcode',
+  city: 'City',
+  differentAddress: 'I live at another address',
+  email: 'Email',
+  nationality: 'Nationality',
+  movedHouse: 'Moved house in the last 12 months',
+  firstLineCurrentAddress: 'First line of current address',
+  secondLineCurrentAddress: 'Second line of current address',
+  currentPostcode: 'Current postcode',
+  currentCity: 'Current city',
+  citizenOf: 'Citizen of',
+  oldAddressFirstLineAddress: 'First line of previous address',
+  oldAddressSecondLineAddress: 'Second line of previous address',
+  oldAddressPostcode: 'Previous address postcode',
+  oldAddressCity: 'Previous address city',
+  registeredAsOverseasVoter: 'Registered in the UK as an overseas voter',
+  dateOfBirth: 'Date of birth',
+  nin: 'National insurance number',
+  changedName: 'Changed my name',
+  previousName: 'Previous name',
+  postalVote: 'I would like to vote by postal vote',
+  currentDate: 'Current date',
+  registeredAtHome: 'My name has been entered on a register of electors in my home country',
+  homeCountryConstituency: 'Name of the locality or constituency where you were last registered',
+  postalVoteOption: 'Postal vote option',
+  postalVoteElectionDate: 'Postal vote for elections on date',
+  postalVoteFrom: 'Postal vote from',
+  postalVoteTo: 'Postal vote to',
+};
+
 class SignaturePage extends React.Component {
   constructor(props) {
     super(props);
@@ -90,14 +132,16 @@ class SignaturePage extends React.Component {
         <ul className="RevisedUserDetails">
           {
             Object.keys(formData)
-              .filter(key => formData[key].length)
+              .filter(key => (formData[key].length || /differentAddress|movedHouse|registeredAsOverseasVoter|postalVote$/.test(key))
+                && !(!formData.postalVote && key === 'postalVoteOption')
+                && key !== 'userType')
               .map(key => (
                 <li key={key}>
                   <b>
-                    {key}
+                    {hrfFields[key]}
                     :&nbsp;
                   </b>
-                  {formData[key]}
+                  {formatVale(formData[key])}
                 </li>
               ))
           }

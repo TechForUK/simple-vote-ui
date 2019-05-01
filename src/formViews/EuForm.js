@@ -76,11 +76,6 @@ const requiredFields = [
     toBe: true,
   },
   {
-    field: 'dateOfNameChange',
-    dependsOn: 'changedName',
-    toBe: true,
-  },
-  {
     field: 'postalVoteElectionDate',
     dependsOn: 'postalVoteOption',
     toBe: 'specificElection',
@@ -254,10 +249,6 @@ class EuForm extends React.Component {
             <label htmlFor="previousName">
               <span>Most recent previous name:</span>
               <input className={classNames({ Error: fieldsWithErrors.includes('previousName') })} id="previousName" name="previousName" type="text" value={formData.previousName} onChange={updateData} />
-            </label>
-            <label htmlFor="dateOfNameChange">
-              <span>Date of name change:</span>
-              <input className={classNames({ Error: fieldsWithErrors.includes('dateOfNameChange') })} id="dateOfNameChange" name="dateOfNameChange" type="date" value={formData.dateOfNameChange} onChange={updateData} />
             </label>
           </Fragment>
         ) : null}
