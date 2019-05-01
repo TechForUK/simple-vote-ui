@@ -5,7 +5,7 @@ import RenderingController from './RenderingController';
 
 import './App.css';
 
-const server = 'http://127.0.0.1:4000';
+const server = 'https://europe-west1-simple-vote-api-239117.cloudfunctions.net/fillAndSignForms';
 
 function twoDigitFormat(number) {
   return (`0${number}`).slice(-2);
