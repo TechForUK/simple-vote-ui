@@ -4,6 +4,7 @@
 }
 
 .Form .IndentedSection {
+  box-sizing: border-box;
   padding-left: 64px;
   max-width: 600px;
 }
@@ -35,10 +36,6 @@
 
 .Form input[type=text] {
   width: 100%;
-}
-
-.IndentedSection input[type=text]{
-  width: 90%;
 }
 
 .Form input[type=checkbox] {
