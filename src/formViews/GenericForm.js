@@ -106,9 +106,9 @@ class GenericForm extends React.Component {
     const { fieldsWithErrors } = this.state;
     return (
       <form className="Form">
-        <label htmlFor="fname">
+        <label htmlFor="firstName">
           <span>First Name(s)</span>
-          <input className={classNames({ Error: fieldsWithErrors.includes('fname') })} id="firstName" name="firstName" autoComplete="fname" type="text" value={formData.firstName} onChange={updateData} />
+          <input className={classNames({ Error: fieldsWithErrors.includes('firstName') })} id="firstName" name="firstName" autoComplete="fname" type="text" value={formData.firstName} onChange={updateData} />
         </label>
         <label htmlFor="surname">
           <span>Surname</span>
