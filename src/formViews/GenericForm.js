@@ -108,27 +108,27 @@ class GenericForm extends React.Component {
       <form className="Form">
         <label htmlFor="firstName">
           <span>First Name(s)</span>
-          <input className={classNames({ Error: fieldsWithErrors.includes('firstName') })} id="firstName" name="firstName" type="text" value={formData.firstName} onChange={updateData} />
+          <input className={classNames({ Error: fieldsWithErrors.includes('firstName') })} id="firstName" name="firstName" type="text" autoComplete="given-name" value={formData.firstName} onChange={updateData} />
         </label>
         <label htmlFor="surname">
           <span>Surname</span>
-          <input className={classNames({ Error: fieldsWithErrors.includes('surname') })} id="surname" name="surname" type="text" value={formData.surname} onChange={updateData} />
+          <input className={classNames({ Error: fieldsWithErrors.includes('surname') })} id="surname" name="surname" type="text" autoComplete="family-name" value={formData.surname} onChange={updateData} />
         </label>
         <label htmlFor="firstLineAddress">
           <span>First line of address</span>
-          <input className={classNames({ Error: fieldsWithErrors.includes('firstLineAddress') })} id="firstLineAddress" name="firstLineAddress" type="text" value={formData.firstLineAddress} onChange={updateData} />
+          <input className={classNames({ Error: fieldsWithErrors.includes('firstLineAddress') })} id="firstLineAddress" name="firstLineAddress" type="text" autoComplete="section-registration address-line1" value={formData.firstLineAddress} onChange={updateData} />
         </label>
         <label htmlFor="secondLineAddress">
           <span>Second line of address</span>
-          <input className={classNames({ Error: fieldsWithErrors.includes('secondLineAddress') })} id="secondLineAddress" name="secondLineAddress" type="text" value={formData.secondLineAddress} onChange={updateData} />
+          <input className={classNames({ Error: fieldsWithErrors.includes('secondLineAddress') })} id="secondLineAddress" name="secondLineAddress" type="text" autoComplete="section-registration address-line2" value={formData.secondLineAddress} onChange={updateData} />
         </label>
         <label htmlFor="postcode">
           <span>Postcode</span>
-          <input className={classNames({ Error: fieldsWithErrors.includes('postcode') })} id="postcode" name="postcode" type="text" value={formData.postcode} onChange={updateData} />
+          <input className={classNames({ Error: fieldsWithErrors.includes('postcode') })} id="postcode" name="postcode" type="text" autoComplete="section-registration postal-code" value={formData.postcode} onChange={updateData} />
         </label>
         <label htmlFor="city">
           <span>City/Town</span>
-          <input className={classNames({ Error: fieldsWithErrors.includes('city') })} id="city" name="city" type="text" value={formData.city} onChange={updateData} />
+          <input className={classNames({ Error: fieldsWithErrors.includes('city') })} id="city" name="city" type="text" autoComplete="section-registration locality" value={formData.city} onChange={updateData} />
         </label>
         <label htmlFor="differentAddress" className="Label-SameLine">
           <input id="differentAddress" name="differentAddress" type="checkbox" checked={formData.differentAddress} onChange={updateData} />
@@ -136,7 +136,7 @@ class GenericForm extends React.Component {
         </label>
         <label htmlFor="email">
           <span>Email</span>
-          <input className={classNames({ Error: fieldsWithErrors.includes('email') })} id="email" name="email" type="text" value={formData.email} onChange={updateData} />
+          <input className={classNames({ Error: fieldsWithErrors.includes('email') })} id="email" name="email" type="email" autoComplete="email" value={formData.email} onChange={updateData} />
         </label>
         <label htmlFor="nationality">
           <span>Nationality (If you have more than one, include all)</span>
@@ -150,19 +150,19 @@ class GenericForm extends React.Component {
           <Fragment>
             <label htmlFor="oldAddressFirstLineAddress" className="IndentedSection">
               <span>First line of address</span>
-              <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressFirstLineAddress') })} id="oldAddressFirstLineAddress" name="oldAddressFirstLineAddress" type="text" value={formData.oldAddressFirstLineAddress} onChange={updateData} />
+              <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressFirstLineAddress') })} id="oldAddressFirstLineAddress" name="oldAddressFirstLineAddress" type="text" autoComplete="section-old address-line1" value={formData.oldAddressFirstLineAddress} onChange={updateData} />
             </label>
             <label htmlFor="oldAddressSecondLineAddress" className="IndentedSection">
               <span>Second line of address</span>
-              <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressSecondLineAddress') })} id="oldAddressSecondLineAddress" name="oldAddressSecondLineAddress" type="text" value={formData.oldAddressSecondLineAddress} onChange={updateData} />
+              <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressSecondLineAddress') })} id="oldAddressSecondLineAddress" name="oldAddressSecondLineAddress" type="text" autoComplete="section-old address-line2" value={formData.oldAddressSecondLineAddress} onChange={updateData} />
             </label>
             <label htmlFor="oldAddressPostcode" className="IndentedSection">
               <span>Postcode</span>
-              <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressPostcode') })} id="oldAddressPostcode" name="oldAddressPostcode" type="text" value={formData.oldAddressPostcode} onChange={updateData} />
+              <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressPostcode') })} id="oldAddressPostcode" name="oldAddressPostcode" type="text" autoComplete="section-old postal-code" value={formData.oldAddressPostcode} onChange={updateData} />
             </label>
             <label htmlFor="oldAddressCity" className="IndentedSection">
               <span>City/Town</span>
-              <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressCity') })} id="oldAddressCity" name="oldAddressCity" type="text" value={formData.oldAddressCity} onChange={updateData} />
+              <input className={classNames({ Error: fieldsWithErrors.includes('oldAddressCity') })} id="oldAddressCity" name="oldAddressCity" type="text" autoComplete="section-old locality" value={formData.oldAddressCity} onChange={updateData} />
             </label>
             <label htmlFor="registeredAsOverseasVoter" className="Label-SameLine IndentedSection">
               <input id="registeredAsOverseasVoter" name="registeredAsOverseasVoter" type="checkbox" checked={formData.registeredAsOverseasVoter} onChange={updateData} />
@@ -172,7 +172,7 @@ class GenericForm extends React.Component {
         ) : null}
         <label htmlFor="dateOfBirth">
           <span>Date of birth</span>
-          <input className={classNames({ Error: fieldsWithErrors.includes('dateOfBirth') })} id="dateOfBirth" name="dateOfBirth" type="date" value={formData.dateOfBirth} onChange={updateData} />
+          <input className={classNames({ Error: fieldsWithErrors.includes('dateOfBirth') })} id="dateOfBirth" name="dateOfBirth" type="date" autoComplete="bday" value={formData.dateOfBirth} onChange={updateData} />
         </label>
         <label htmlFor="nin">
           <span>National insurance number</span>
