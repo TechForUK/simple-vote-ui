@@ -56,7 +56,6 @@ class App extends React.Component {
         signature: '',
       },
       electoralOfficeEmail: '',
-      cookieNoticeDimsissed: localStorage.getItem('agreedToCookies') || false,
     };
 
     this.updateData = this.updateData.bind(this);
@@ -97,7 +96,6 @@ class App extends React.Component {
       view,
       formData,
       electoralOfficeEmail,
-      cookieNoticeDimsissed,
     } = this.state;
 
     return (
@@ -119,24 +117,6 @@ class App extends React.Component {
           <br />
           <a href="https://democracyclub.org.uk/" className="imprint" target="_blank" rel="noopener noreferrer">Postcode lookup data provided by Democracy Club</a>
         </div>
-        {!cookieNoticeDimsissed ? (
-          <div className="CookieConsent">
-            <p>
-              This website uses cookies to ensure you get the best experience on our website.
-              {' '}
-              <a href="/cookiePolicy/">Learn more</a>
-            </p>
-            <button
-              type="button"
-              onClick={() => {
-                this.setState({ cookieNoticeDimsissed: true });
-                localStorage.setItem('agreedToCookies', true);
-              }}
-            >
-              I agree
-            </button>
-          </div>
-        ) : null}
       </div>
     );
   }

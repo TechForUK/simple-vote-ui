@@ -35,10 +35,10 @@ function Welcome() {
       <p>
         By using this app you agree to our
         {' '}
-        <a href="/termsAndConditions/">Terms and Conditions</a>
+        <Link to="/termsAndConditions/">Terms and Conditions</Link>
         . We will not collect any of the data you provide, you can have a look at our
         {' '}
-        <a href="/privacyPolicy/">Privacy policy</a>
+        <Link to="/privacyPolicy/">Privacy policy</Link>
         .
       </p>
     </Fragment>
