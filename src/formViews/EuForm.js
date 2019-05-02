@@ -87,7 +87,7 @@ function EuForm({ history, formData, updateData }) {
       </label>
       <label htmlFor="nationality">
         <span>Nationality (If you have more than one, include all):</span>
-        <input id="nationality" name="nationality" required type="text" maxLength="50" value={formData.nationality} onChange={updateData} />
+        <input id="nationality" name="nationality" required type="text" maxLength="50" autoComplete="nationality" value={formData.nationality} onChange={updateData} />
       </label>
       <label htmlFor="movedHouse" className="Label-SameLine">
         <input id="movedHouse" name="movedHouse" type="checkbox" checked={formData.movedHouse} onChange={updateData} />
