@@ -24,7 +24,7 @@ function ThankYou() {
         <li><a href="mailto:?subject=Get%20Voting%20-%20Register%20to%20vote%20in%20the%20UK%20to%20make%20sure%20you%20can%20vote!%20%23ThisTimeImVoting%20It%20takes%20five%20minutes%20online%20and%20you%20don%E2%80%99t%20need%20a%20printer!%20Make%20sure%20your%20voice%20is%20heard.&body=:%20https%3A%2F%2Fsimple.getvoting.org" target="_blank" title="Send email" rel="noopener noreferrer"><img alt="Send email" src={imageEmail} /></a></li>
       </ul>
       <p><a href="https://www.bestforbritain.org/" alt="Go To Best for britain"><img className="b4bLogo" src={imageB4bLogo} alt="logo" /></a></p>
-      
+      <p><a href="https://democracyclub.org.uk/" className="secondaryLink" target="_blank" rel="noopener noreferrer">Postcode lookup data provided by Democracy Club</a></p>
     </Fragment>
   );
 }

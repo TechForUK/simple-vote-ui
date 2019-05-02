@@ -15,7 +15,7 @@ function Welcome() {
       <div className="welcome-row-1">
         <img alt="timer" src={imageTimer} className="image-timer" />
         <p className="primary-text">Sign up to vote in under 5 mins!</p>
-        <p className="secondary-text">Less than the time it take to make a cup of tea</p>
+        <p className="secondary-text">No printing, no posting, no fuss!</p>
       </div>
       <Link className="Button" to="/typeOfVoter/">Start Now</Link>
       <div className="welcome-row-2">
@@ -32,7 +32,6 @@ function Welcome() {
           <span className="secondary-text">We send it for you!</span>
         </p>
       </div>
-      <p className="primary-text">No printing, no posting, no fuss!</p>
     </Fragment>
   );
 }
