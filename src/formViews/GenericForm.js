@@ -28,7 +28,7 @@ function GenericForm({ history, formData, updateData }) {
       </label>
       <label htmlFor="secondLineAddress">
         <span>Second line of address:</span>
-        <input id="secondLineAddress" name="secondLineAddress" required type="text" autoComplete="section-registration address-line2" value={formData.secondLineAddress} onChange={updateData} />
+        <input id="secondLineAddress" name="secondLineAddress" type="text" autoComplete="section-registration address-line2" value={formData.secondLineAddress} onChange={updateData} />
       </label>
       <label htmlFor="postcode">
         <span>Postcode:</span>
@@ -62,7 +62,7 @@ function GenericForm({ history, formData, updateData }) {
           </label>
           <label htmlFor="oldAddressSecondLineAddress" className="IndentedSection">
             <span>Second line of address:</span>
-            <input id="oldAddressSecondLineAddress" name="oldAddressSecondLineAddress" required={formData.movedHouse} type="text" autoComplete="section-old address-line2" value={formData.oldAddressSecondLineAddress} onChange={updateData} />
+            <input id="oldAddressSecondLineAddress" name="oldAddressSecondLineAddress" type="text" autoComplete="section-old address-line2" value={formData.oldAddressSecondLineAddress} onChange={updateData} />
           </label>
           <label htmlFor="oldAddressPostcode" className="IndentedSection">
             <span>Postcode:</span>

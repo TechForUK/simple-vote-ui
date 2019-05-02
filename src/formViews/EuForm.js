@@ -28,7 +28,7 @@ function EuForm({ history, formData, updateData }) {
       </label>
       <label htmlFor="secondLineAddress">
         <span>Second line of address:</span>
-        <input id="secondLineAddress" name="secondLineAddress" required type="text" maxLength="50" autoComplete="section-registration address-line2" value={formData.secondLineAddress} onChange={updateData} />
+        <input id="secondLineAddress" name="secondLineAddress" type="text" maxLength="50" autoComplete="section-registration address-line2" value={formData.secondLineAddress} onChange={updateData} />
       </label>
       <label htmlFor="postcode">
         <span>Postcode:</span>
@@ -50,7 +50,7 @@ function EuForm({ history, formData, updateData }) {
           </label>
           <label htmlFor="secondLineCurrentAddress" className="IndentedSection">
             <span>Second line of current address:</span>
-            <input id="secondLineCurrentAddress" name="secondLineCurrentAddress" required={formData.differentAddress} type="text" maxLength="50" autoComplete="section-current address-line2" value={formData.secondLineCurrentAddress} onChange={updateData} />
+            <input id="secondLineCurrentAddress" name="secondLineCurrentAddress" type="text" maxLength="50" autoComplete="section-current address-line2" value={formData.secondLineCurrentAddress} onChange={updateData} />
           </label>
           <label htmlFor="currentPostcode" className="IndentedSection">
             <span>Postcode of current address:</span>
@@ -101,7 +101,7 @@ function EuForm({ history, formData, updateData }) {
           </label>
           <label htmlFor="oldAddressSecondLineAddress" className="IndentedSection">
             <span>Second line of address:</span>
-            <input id="oldAddressSecondLineAddress" name="oldAddressSecondLineAddress" required={formData.movedHouse} type="text" maxLength="50" autoComplete="section-old address-line2" value={formData.oldAddressSecondLineAddress} onChange={updateData} />
+            <input id="oldAddressSecondLineAddress" name="oldAddressSecondLineAddress" type="text" maxLength="50" autoComplete="section-old address-line2" value={formData.oldAddressSecondLineAddress} onChange={updateData} />
           </label>
           <label htmlFor="oldAddressPostcode" className="IndentedSection">
             <span>Postcode:</span>
