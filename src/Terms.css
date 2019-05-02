@@ -1,0 +1,17 @@
+.TermsContainer {
+  text-align: left;
+  padding: 20px;
+}
+
+.TermsContainer h1 {
+  text-align: center;
+  margin: auto;
+}
+
+.CloseButton {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+}

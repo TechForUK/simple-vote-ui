@@ -32,6 +32,15 @@ function Welcome() {
           <span className="secondary-text">We send it for you!</span>
         </p>
       </div>
+      <p>
+        By using this app you agree to our
+        {' '}
+        <Link to="/termsAndConditions/">Terms and Conditions</Link>
+        . We will not collect any of the data you provide, you can have a look at our
+        {' '}
+        <Link to="/privacyPolicy/">Privacy policy</Link>
+        .
+      </p>
     </Fragment>
   );
 }
