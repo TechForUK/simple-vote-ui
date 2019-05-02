@@ -122,8 +122,8 @@ function EuForm({ history, formData, updateData }) {
         <input id="dateOfBirth" name="dateOfBirth" required type="date" autoComplete="bday" value={formData.dateOfBirth} onChange={updateData} />
       </label>
       <label htmlFor="nin">
-        <span>National insurance number:</span>
-        <input id="nin" name="nin" required type="text" maxLength="50" value={formData.nin} onChange={updateData} />
+        <span>National insurance number (no spaces):</span>
+        <input id="nin" name="nin" required type="text" maxLength="50" value={formData.nin} onChange={updateData} pattern="^[a-zA-Z]{2}(?:\d){6}[a-zA-Z]?$" />
       </label>
       <label htmlFor="changedName" className="Label-SameLine">
         <input id="changedName" name="changedName" type="checkbox" checked={formData.changedName} onChange={updateData} />
