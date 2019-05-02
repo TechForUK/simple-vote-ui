@@ -168,7 +168,17 @@ class SignaturePage extends React.Component {
             <Fragment>
               <h2>
                 There was a problem getting your local electoral office email.
-                Please have a look here and input it manually below.
+                Please have a look
+                {' '}
+                <a
+                  href="https://www.gov.uk/get-on-electoral-register"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  here
+                </a>
+                {' '}
+                and input it manually below.
               </h2>
               <label htmlFor="electoralOfficeEmail">
                 Electoral office email:
