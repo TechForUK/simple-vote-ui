@@ -42,7 +42,6 @@ class App extends React.Component {
         nin: '',
         changedName: '',
         previousName: '',
-        dateOfNameChange: '',
         postalVote: true,
         currentDate: (() => {
           const currentDate = new Date();
@@ -56,15 +55,16 @@ class App extends React.Component {
         postalVoteTo: '',
         signature: '',
       },
+      electoralOfficeEmail: '',
     };
 
     this.updateData = this.updateData.bind(this);
     this.submitData = this.submitData.bind(this);
+    this.setElectoralOfficeEmail = this.setElectoralOfficeEmail.bind(this);
   }
 
-  // For debugging purposes; remove this later
-  componentDidUpdate() {
-    console.log(this.state.formData);
+  setElectoralOfficeEmail(email) {
+    return this.setState({ electoralOfficeEmail: email });
   }
 
   updateData(event) {
@@ -82,8 +82,8 @@ class App extends React.Component {
   }
 
   submitData() {
-    const { formData } = this.state;
-    axios.post(`${server}/register`, { userData: { ...formData } }).then((response) => {
+    const { formData, electoralOfficeEmail } = this.state;
+    axios.post(`${server}/register`, { userData: { ...formData }, electoralOfficeEmail }).then((response) => {
       console.log(response);
     }).catch((error) => {
       console.log(error);
@@ -91,8 +91,8 @@ class App extends React.Component {
   }
 
   render() {
-    const { updateData, submitData } = this;
-    const { view, formData } = this.state;
+    const { setElectoralOfficeEmail, updateData, submitData } = this;
+    const { view, formData, electoralOfficeEmail } = this.state;
 
     return (
       <div className="App">
@@ -100,6 +100,8 @@ class App extends React.Component {
           <RenderingController
             view={view}
             formData={formData}
+            setElectoralOfficeEmail={setElectoralOfficeEmail}
+            electoralOfficeEmail={electoralOfficeEmail}
             updateData={updateData}
             submitData={submitData}
           />
