@@ -44,3 +44,15 @@ button, .Button {
 a.imprint:visited{
   color: #aaa;
 }
+
+.CookieConsent {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: #ccc;
+}
+
+.CookieConsent button {
+  padding: 8px 12px;
+  font-size: 18px;
+}
