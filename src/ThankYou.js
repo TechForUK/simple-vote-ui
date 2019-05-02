@@ -10,7 +10,10 @@ import imageB4bLogo from './img/b4b-new-white-logo.svg';
 import './Thankyou.css';
 
 function ThankYou() {
-  window.fbq('track', 'Subscribe', { value: '0.00', currency: 'USD', predicted_ltv: '0.00' });
+  if (window.fbq) {
+    window.fbq('track', 'Subscribe', { value: '0.00', currency: 'USD', predicted_ltv: '0.00' });
+  }
+
   setTimeout(() => {
     window.location = 'https://www.bestforbritain.org/thankyou';
   }, 5000);
