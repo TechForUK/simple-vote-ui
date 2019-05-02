@@ -56,6 +56,7 @@ class App extends React.Component {
         signature: '',
       },
       electoralOfficeEmail: '',
+      cookieNoticeDimsissed: localStorage.getItem('agreedToCookies') || false,
     };
 
     this.updateData = this.updateData.bind(this);
@@ -92,7 +93,12 @@ class App extends React.Component {
 
   render() {
     const { setElectoralOfficeEmail, updateData, submitData } = this;
-    const { view, formData, electoralOfficeEmail } = this.state;
+    const {
+      view,
+      formData,
+      electoralOfficeEmail,
+      cookieNoticeDimsissed,
+    } = this.state;
 
     return (
       <div className="App">
@@ -106,7 +112,31 @@ class App extends React.Component {
             submitData={submitData}
           />
         </div>
-        <div className="imprint">Promoted by Best for Britain, the campaign name of UK-EU OPEN POLICY LIMITED registered at International House, 24 Holborn Viaduct, London, EC1A 2BN. Best for Britain is registered with The Electoral Commission.</div>
+        <div className="imprint">
+          Promoted by Best for Britain, the campaign name of UK-EU OPEN POLICY LIMITED
+          registered at International House, 24 Holborn Viaduct, London, EC1A 2BN.
+          Best for Britain is registered with The Electoral Commission.
+          <br />
+          <a href="https://democracyclub.org.uk/" className="imprint" target="_blank" rel="noopener noreferrer">Postcode lookup data provided by Democracy Club</a>
+        </div>
+        {!cookieNoticeDimsissed ? (
+          <div className="CookieConsent">
+            <p>
+              This website uses cookies to ensure you get the best experience on our website.
+              {' '}
+              <a href="/cookiePolicy/">Learn more</a>
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                this.setState({ cookieNoticeDimsissed: true });
+                localStorage.setItem('agreedToCookies', true);
+              }}
+            >
+              I agree
+            </button>
+          </div>
+        ) : null}
       </div>
     );
   }

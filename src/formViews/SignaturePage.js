@@ -132,7 +132,8 @@ class SignaturePage extends React.Component {
             Object.keys(formData)
               .filter(key => (formData[key].length || /differentAddress|movedHouse|registeredAsOverseasVoter|postalVote$/.test(key))
                 && !(!formData.postalVote && key === 'postalVoteOption')
-                && key !== 'userType')
+                && key !== 'userType'
+                && key !== 'signature')
               .map(key => (
                 <li key={key}>
                   <b>
@@ -167,7 +168,17 @@ class SignaturePage extends React.Component {
             <Fragment>
               <h2>
                 There was a problem getting your local electoral office email.
-                Please have a look here and input it manually below.
+                Please have a look
+                {' '}
+                <a
+                  href="https://www.gov.uk/get-on-electoral-register"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  here
+                </a>
+                {' '}
+                and input it manually below.
               </h2>
               <label htmlFor="electoralOfficeEmail">
                 Electoral office email:

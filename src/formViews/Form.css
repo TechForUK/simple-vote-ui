@@ -15,7 +15,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   padding: 8px 24px;
+  box-sizing: border-box;
+}
+
+.Form label span {
+  width: 100%;
+  padding: 0px 0px 6px 3px;
   box-sizing: border-box;
 }
 

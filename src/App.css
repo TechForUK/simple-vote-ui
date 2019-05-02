@@ -40,3 +40,28 @@ button, .Button {
   padding: 10px;
   font-size:11px;
 }
+
+a.imprint:visited{
+  color: #aaa;
+}
+
+.CookieConsent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: #ccc;
+}
+
+.CookieConsent button {
+  white-space: nowrap;
+  padding: 8px 12px;
+  font-size: 18px;
+}
+
+.CookieConsent p {
+  padding: 8px 8px;
+  font-size: 16px;
+}
