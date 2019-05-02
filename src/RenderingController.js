@@ -58,18 +58,8 @@ function RenderingController({
           exact
           render={() => <ThankYou />}
         />
-        <Route
-          shouldRedirect={shouldRedirect}
-          path="/termsAndConditions"
-          exact
-          render={() => <Terms />}
-        />
-        <Route
-          shouldRedirect={shouldRedirect}
-          path="/privacy"
-          exact
-          render={() => <Privacy />}
-        />
+        <Route path="/termsAndConditions" exact render={() => <Terms />} />
+        <Route path="/privacyPolicy" exact render={() => <Privacy />} />
       </Router>
     </Fragment>
   );
