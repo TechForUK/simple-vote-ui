@@ -106,7 +106,11 @@ class App extends React.Component {
             submitData={submitData}
           />
         </div>
-        <div className="imprint">Promoted by Best for Britain, the campaign name of UK-EU OPEN POLICY LIMITED registered at International House, 24 Holborn Viaduct, London, EC1A 2BN. Best for Britain is registered with The Electoral Commission.</div>
+        <div className="imprint">
+          Promoted by Best for Britain, the campaign name of UK-EU OPEN POLICY LIMITED registered at International House, 24 Holborn Viaduct, London, EC1A 2BN. Best for Britain is registered with The Electoral Commission.
+          <br />
+          <a href="https://democracyclub.org.uk/" className="imprint" target="_blank" rel="noopener noreferrer">Postcode lookup data provided by Democracy Club</a>
+        </div>
       </div>
     );
   }

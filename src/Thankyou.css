@@ -25,3 +25,8 @@ ul.share-buttons .sr-only {
   padding: 16px;
   border-radius: 16px;
 }
+
+.secondaryLink {
+  color: #888888;
+  font-size: 12px;
+}

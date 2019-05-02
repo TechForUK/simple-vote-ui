@@ -40,3 +40,7 @@ button, .Button {
   padding: 10px;
   font-size:11px;
 }
+
+a.imprint:visited{
+  color: #aaa;
+}

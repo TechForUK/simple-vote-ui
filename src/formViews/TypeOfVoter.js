@@ -20,7 +20,7 @@ function TypeOfVoter({ updateData }) {
           await updateData({ target: { value: 'eu_citizen_in_uk', name: 'userType' } });
         }}
       >
-        I am a EU citizen living in the UK
+        I am an EU citizen living in the UK
       </Link>
     </Fragment>
   );
