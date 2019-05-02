@@ -34,7 +34,7 @@
   box-sizing: border-box;
 }
 
-.Form input[type=text] {
+.Form input[type=text], .Form input[type=email] {
   width: 100%;
 }
 
