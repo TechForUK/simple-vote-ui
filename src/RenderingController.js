@@ -67,9 +67,9 @@ function RenderingController({
           exact
           render={() => <ThankYou />}
         />
-        <Route path="/termsAndConditions" exact render={() => <Terms />} />
-        <Route path="/privacyPolicy" exact render={() => <Privacy />} />
-        <Route path="/cookiePolicy" exact render={() => <Cookies />} />
+        <Route path="/termsAndConditions/" exact render={() => <Terms />} />
+        <Route path="/privacyPolicy/" exact render={() => <Privacy />} />
+        <Route path="/cookiePolicy/" exact render={() => <Cookies />} />
       </Router>
     </Fragment>
   );
