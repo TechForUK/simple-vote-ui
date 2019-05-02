@@ -9,6 +9,7 @@ import SignaturePage from './formViews/SignaturePage';
 import ThankYou from './ThankYou';
 import Terms from './Terms';
 import Privacy from './Privacy';
+import Cookies from './Cookies';
 
 function RenderingController({
   formData,
@@ -68,6 +69,7 @@ function RenderingController({
         />
         <Route path="/termsAndConditions" exact render={() => <Terms />} />
         <Route path="/privacyPolicy" exact render={() => <Privacy />} />
+        <Route path="/cookiePolicy" exact render={() => <Cookies />} />
       </Router>
     </Fragment>
   );
