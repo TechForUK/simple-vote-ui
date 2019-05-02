@@ -10,6 +10,8 @@ import ThankYou from './ThankYou';
 
 function RenderingController({
   formData,
+  electoralOfficeEmail,
+  setElectoralOfficeEmail,
   updateData,
   submitData,
 }) {
@@ -47,7 +49,13 @@ function RenderingController({
           path="/signaturePage/"
           exact
           render={() => (
-            <SignaturePage formData={formData} updateData={updateData} submitData={submitData} />
+            <SignaturePage
+              formData={formData}
+              electoralOfficeEmail={electoralOfficeEmail}
+              setElectoralOfficeEmail={setElectoralOfficeEmail}
+              updateData={updateData}
+              submitData={submitData}
+            />
           )}
         />
         <ProtectedRoute
