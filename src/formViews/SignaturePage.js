@@ -8,7 +8,6 @@ import Spinner from '../Spinner';
 import './SignaturePage.css';
 
 const URL = 'https://wheredoivote.co.uk/api/beta/postcode';
-const API_KEY_PARAM='?auth_token=7f45b6dec54ceb4aa3909cc4e537be66e49e07e3'
 
 function formatVale(value) {
   if (typeof value === 'string') {
@@ -99,7 +98,7 @@ class SignaturePage extends React.Component {
     const { formData, setElectoralOfficeEmail } = this.props;
     const { postcode } = formData;
     try {
-      const response = await axios.get(`${URL}/${postcode}.json${API_KEY_PARAM}`);
+      const response = await axios.get(`${URL}/${postcode}.json`);
       await setElectoralOfficeEmail(response.data.council.email);
       this.setState({
         electoralOffice: {
