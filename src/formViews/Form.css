@@ -72,12 +72,8 @@
   color: #ffffff;
   font-size: 32px;
   font-weight: bold;
-  margin: 16px;
+  margin: auto;
   background:#0FCDB0;
   text-align: center;
   text-decoration: none;
-}
-
-.Error {
-  border-color: red !important;
 }
