@@ -121,9 +121,11 @@ class App extends React.Component {
         </div>
         {!cookieNoticeDimsissed ? (
           <div className="CookieConsent">
-            This website uses cookies to ensure you get the best experience on our website.
-            {' '}
-            <a href="/cookiePolicy/">Learn more</a>
+            <p>
+              This website uses cookies to ensure you get the best experience on our website.
+              {' '}
+              <a href="/cookiePolicy/">Learn more</a>
+            </p>
             <button
               type="button"
               onClick={() => {
