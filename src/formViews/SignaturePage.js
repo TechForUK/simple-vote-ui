@@ -132,7 +132,8 @@ class SignaturePage extends React.Component {
             Object.keys(formData)
               .filter(key => (formData[key].length || /differentAddress|movedHouse|registeredAsOverseasVoter|postalVote$/.test(key))
                 && !(!formData.postalVote && key === 'postalVoteOption')
-                && key !== 'userType')
+                && key !== 'userType'
+                && key !== 'signature')
               .map(key => (
                 <li key={key}>
                   <b>
