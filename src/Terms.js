@@ -92,7 +92,7 @@ function Terms() {
       <p>You also acknowledge that we cannot guarantee the performance or security of the Website. In particular, we will not be responsible for any damage or loss you may suffer directly or indirectly as a result of any virus attack that can be traced to the Website to the fullest extent permissible by law.</p>
       <br />
       <p>6. Your privacy and cookies</p>
-      <p>The privacy of your personal data is important to us. Please see our <Link to="privacyPolicy">Privacy Policy</Link>  and <Link to="/cookiePolicy/">Cookie Policy</Link>  for details of how we will process your personal data and how we use cookies and similar technologies.</p>
+      <p>The privacy of your personal data is important to us. Please see our <Link to="/privacyPolicy/">Privacy Policy</Link>  and <Link to="/cookiePolicy/">Cookie Policy</Link>  for details of how we will process your personal data and how we use cookies and similar technologies.</p>
       <br />
       <p>7. Intellectual property in the Website and the Content</p>
       <p>The design of the Website, the content and all software contained within the Website are protected by copyright, trade marks, patents and other intellectual property rights and laws.</p>
@@ -102,7 +102,7 @@ function Terms() {
       <p>use any content in any manner that may infringe any of our rights or the rights of a third party.</p>
       <br />
       <p>8. Grant of Rights and Licences</p>
-      <p>By entering your details to allow us to send your information to the relevant Local Authority to register to vote, register for a postal vote, or register as an EU citizen to vote you agree to our <Link to="privacyPolicy">Privacy Policy.</Link></p>
+      <p>By entering your details to allow us to send your information to the relevant Local Authority to register to vote, register for a postal vote, or register as an EU citizen to vote you agree to our <Link to="/privacyPolicy/">Privacy Policy.</Link></p>
       <br />
       <p>9. Linking to our website</p>
       <p>We will permit you to link to the home page of the Website provided you comply with the following:</p>
