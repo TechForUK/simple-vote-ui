@@ -15,6 +15,15 @@ function TypeOfVoter({ updateData }) {
       </Link>
       <Link
         className="Button"
+        to="/genericForm/"
+        onClick={async () => {
+          await updateData({ target: { value: 'uk_citizen_in_uk', name: 'userType' } });
+        }}
+      >
+        I am a Commonwealth citizen living in the UK
+      </Link>
+      <Link
+        className="Button"
         to="/euCitizenForm/"
         onClick={async () => {
           await updateData({ target: { value: 'eu_citizen_in_uk', name: 'userType' } });
