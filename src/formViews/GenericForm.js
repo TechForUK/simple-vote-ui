@@ -57,19 +57,19 @@ function GenericForm({ history, formData, updateData }) {
       {formData.movedHouse ? (
         <Fragment>
           <label htmlFor="oldAddressFirstLineAddress" className="IndentedSection">
-            <span>First line of address:</span>
+            <span>First line of old address:</span>
             <input id="oldAddressFirstLineAddress" name="oldAddressFirstLineAddress" required={formData.movedHouse} type="text" autoComplete="section-old address-line1" value={formData.oldAddressFirstLineAddress} onChange={updateData} />
           </label>
           <label htmlFor="oldAddressSecondLineAddress" className="IndentedSection">
-            <span>Second line of address:</span>
+            <span>Second line of old address:</span>
             <input id="oldAddressSecondLineAddress" name="oldAddressSecondLineAddress" type="text" autoComplete="section-old address-line2" value={formData.oldAddressSecondLineAddress} onChange={updateData} />
           </label>
           <label htmlFor="oldAddressPostcode" className="IndentedSection">
-            <span>Postcode:</span>
+            <span>Postcode of old address:</span>
             <input id="oldAddressPostcode" name="oldAddressPostcode" required={formData.movedHouse} type="text" autoComplete="section-old postal-code" value={formData.oldAddressPostcode} onChange={updateData} />
           </label>
           <label htmlFor="oldAddressCity" className="IndentedSection">
-            <span>City/Town:</span>
+            <span>City/Town of old address:</span>
             <input id="oldAddressCity" name="oldAddressCity" required={formData.movedHouse} type="text" autoComplete="section-old address-level2" value={formData.oldAddressCity} onChange={updateData} />
           </label>
           <label htmlFor="registeredAsOverseasVoter" className="Label-SameLine IndentedSection">
