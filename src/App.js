@@ -111,10 +111,19 @@ class App extends React.Component {
           />
         </div>
         <div className="imprint">
-          Promoted by Best for Britain, the campaign name of UK-EU OPEN POLICY LIMITED
-          registered at International House, 24 Holborn Viaduct, London, EC1A 2BN.
-          Best for Britain is registered with The Electoral Commission.
-          <br />
+          <p>
+            This tool helps you complete and send applications to electoral registration officers and to make the process as quick and easy as possible.
+            We cannot guarantee that applications will be accepted, nor can we accept responsibility for non-delivery of applications.
+            We advise users to contact their electoral registration officer directly to confirm receipt of application and to confirm whether it has been accepted.
+            You can find out more about registering to vote at
+            {' '}
+            <a href="https://www.gov.uk/register-to-vote">https://www.gov.uk/register-to-vote</a>
+          </p>
+          <p>
+            Promoted by Best for Britain, the campaign name of UK-EU OPEN POLICY LIMITED
+            registered at International House, 24 Holborn Viaduct, London, EC1A 2BN.
+            Best for Britain is registered with The Electoral Commission.
+          </p>
           <a href="https://democracyclub.org.uk/" className="imprint" target="_blank" rel="noopener noreferrer">Postcode lookup data provided by Democracy Club</a>
         </div>
       </div>
