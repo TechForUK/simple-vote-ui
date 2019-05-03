@@ -119,7 +119,7 @@ function EuForm({ history, formData, updateData }) {
       ) : null}
       <label htmlFor="dateOfBirth">
         <span>Date of birth:</span>
-        <input id="dateOfBirth" name="dateOfBirth" required type="date" autoComplete="bday" value={formData.dateOfBirth} onChange={updateData} />
+        <input id="dateOfBirth" name="dateOfBirth" required type="date" placeholder="YYYY-MM-DD" autoComplete="bday" value={formData.dateOfBirth} onChange={updateData} />
       </label>
       <label htmlFor="nin">
         <span>National insurance number (no spaces):</span>
@@ -158,18 +158,18 @@ function EuForm({ history, formData, updateData }) {
           {formData.postalVoteOption === 'specificElection' ? (
             <label htmlFor="postalVoteElectionDate" className="IndentedSection">
               <span>Elections on:</span>
-              <input id="postalVoteElectionDate" name="postalVoteElectionDate" required={formData.postalVoteOption === 'specificElection'} type="date" value={formData.postalVoteElectionDate} onChange={updateData} />
+              <input id="postalVoteElectionDate" name="postalVoteElectionDate" required={formData.postalVoteOption === 'specificElection'} type="date" placeholder="YYYY-MM-DD" value={formData.postalVoteElectionDate} onChange={updateData} />
             </label>
           ) : null}
           {formData.postalVoteOption === 'timePeriod' ? (
             <Fragment>
               <label htmlFor="postalVoteFrom" className="IndentedSection">
                 <span>From:</span>
-                <input id="postalVoteFrom" name="postalVoteFrom" required={formData.postalVoteOption === 'timePeriod'} type="date" value={formData.postalVoteFrom} onChange={updateData} />
+                <input id="postalVoteFrom" name="postalVoteFrom" required={formData.postalVoteOption === 'timePeriod'} type="date" placeholder="YYYY-MM-DD" value={formData.postalVoteFrom} onChange={updateData} />
               </label>
               <label htmlFor="postalVoteTo" className="IndentedSection">
                 <span>To:</span>
-                <input id="postalVoteTo" name="postalVoteTo" required={formData.postalVoteOption === 'timePeriod'} type="date" value={formData.postalVoteTo} onChange={updateData} />
+                <input id="postalVoteTo" name="postalVoteTo" required={formData.postalVoteOption === 'timePeriod'} type="date" placeholder="YYYY-MM-DD" value={formData.postalVoteTo} onChange={updateData} />
               </label>
             </Fragment>
           ) : null}
