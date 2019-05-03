@@ -14,15 +14,10 @@ function ThankYou() {
     window.fbq('track', 'Subscribe', { value: '0.00', currency: 'USD', predicted_ltv: '0.00' });
   }
 
-  setTimeout(() => {
-    window.location = 'https://www.bestforbritain.org/thankyou';
-  }, 5000);
-
   return (
     <Fragment>
       <h1>Thank you!</h1>
       <p>Thank you for submitting your application to register to vote.</p>
-      <p>You will be redirected to Best for Britain in 5 seconds.</p>
       <p>Sharing is caring ... Can you help get someone else enrolled to vote?</p>
       <ul className="share-buttons">
         <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsimple.getvoting.org&quote=Get%20Voting%20-%20Register%20to%20vote%20in%20the%20UK%20to%20make%20sure%20you%20can%20vote!%20%23ThisTimeImVoting%20It%20takes%20five%20minutes%20online%20and%20you%20don%E2%80%99t%20need%20a%20printer!%20Make%20sure%20your%20voice%20is%20heard." title="Share on Facebook" target="_blank" rel="noopener noreferrer"><img alt="Share on Facebook" src={imageFacebook} /></a></li>
