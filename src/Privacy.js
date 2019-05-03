@@ -152,6 +152,7 @@ function Privacy() {
       <p>The types of third party we share your personal information with are platform providers which allow us to deliver the Functionality on the Site and to host and store your personal data. We rely on Sendgrid to deliver some Functionality, including sending emails on your behalf.</p>
       <br />
       <p>Sendgrid acts as a data processor in relation to the collection and processing of your personal data and will only process such personal data as directed by us in accordance with this data protection policy.</p>
+      <p>SendGrid may keep metadata related to emails sent on your behalf for a period of up to 30 days</p>
       <br />
       <p>What is our legal basis?</p>
       <br />
