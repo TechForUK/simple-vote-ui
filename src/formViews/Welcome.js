@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
-import ModalForms from '../ModalForms';
 import imageFillForm from './img/fill_form.png';
 import imageTick from './img/tick.png';
 import imageMail from './img/mail.png';
@@ -17,9 +16,9 @@ function Welcome() {
         <p className="primary-subtext">in 5 minutes</p>
         <div className="bullets">
           <ul className="bullets-list">
-            <li className="bullets-listitem"><span>UK & EU Citizens</span></li>
-            <li className="bullets-listitem"><ModalForms /></li>
-            <li className="bullets-listitem"><span>Guideline compliant</span></li>
+            <li className="bullets-listitem"><span>Submit forms online</span></li>
+            <li className="bullets-listitem"><span>UK/Commonwealth, EU, Postal vote</span></li>
+            <li className="bullets-listitem"><span>Guidelines compliant</span></li>
           </ul>
         </div>
       </div>
