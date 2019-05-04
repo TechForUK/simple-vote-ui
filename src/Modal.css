@@ -20,25 +20,26 @@
   outline: none;
   padding: 1em;
   padding-bottom: 4em;
-  padding: .6em 1.5em 3em;
+  padding: .6em 1.5em 0;
   max-width: 25em;
   margin: 0 auto;
   line-height: 1.4;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .Modal__button_wrapper {
-	position: absolute;
-	bottom:	0;
-  right: 0.5em;
+  float: right;
+  margin-bottom: 23px;
 }
 
 .Modal__button {
-	background-color: #11c0a1;
+  background-color: #11c0a1;
   color: white;
   border-radius: .5em;
   padding: .7em 1.5em .7em;
   border: unset;
-  margin: 20px 13px 20px 0;
+  margin: 0;
   font-size: 1em;
 }
 

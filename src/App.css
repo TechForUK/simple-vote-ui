@@ -72,6 +72,7 @@ a.imprint:visited{
 
 .modal-forms-link {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .form-title {

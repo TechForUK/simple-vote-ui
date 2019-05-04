@@ -27,7 +27,7 @@ function Welcome() {
       <div className="welcome-row-2">
         <p className="welcome-row-2-element">
           <img alt="filled out form" src={imageFillForm} className="image-row-2" />
-          <span className="secondary-text">Enter your details</span>
+          <span className="secondary-text">Fill in your details</span>
         </p>
         <p className="welcome-row-2-element">
           <img alt="checked box" src={imageTick} className="image-row-2" />

@@ -18,11 +18,7 @@ class InfoModal extends React.Component {
               <p>
                 This site uses the details you enter to fill in the appropriate registration forms,
                  and emails them to your local Registration Officer.
-              </p>
-              {/* <p>
-                Your Registration Officer is legally required to process
-                 your forms and contact you to confirm receipt.
-              </p> */}
+              </p>              
               <p className="form-title">
                 1.
                 {' '}
@@ -47,7 +43,6 @@ class InfoModal extends React.Component {
               <p>
                 You'll receive an email with all your completed forms also.
               </p>
-              <br />
             </Modal>
             : null
         }
