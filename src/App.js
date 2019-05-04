@@ -124,7 +124,6 @@ class App extends React.Component {
             registered at International House, 24 Holborn Viaduct, London, EC1A 2BN.
             Best for Britain is registered with The Electoral Commission.
           </p>
-          <a href="https://democracyclub.org.uk/" className="imprint" target="_blank" rel="noopener noreferrer">Postcode lookup data provided by Democracy Club</a>
         </div>
       </div>
     );
