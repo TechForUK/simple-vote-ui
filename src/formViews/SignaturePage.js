@@ -70,6 +70,7 @@ class SignaturePage extends React.Component {
 
   componentDidMount() {
     this.lookupElectoralOffice();
+    window.scrollTo(0, 0);
   }
 
   resetSignature() {
@@ -150,19 +151,29 @@ class SignaturePage extends React.Component {
           <SignaturePad redrawOnResize ref={(ref) => { this.signaturePad = ref; }} />
         </div>
         <button type="button" className="SignaturePadReset" onClick={resetSignature}>Clear signature</button>
-        {emptySignatureNotification ? (
-          <h3 className="Notification">You need to sign the form before you can proceed.</h3>
-        ) : null}
+        <p className="signature-disclaimer">
+          It is
+          {' '}
+          <b>vital</b>
+          {' '}
+          that the signature you give matches your signature when written by hand.
+          Postal vote ballots are verified by matching your signature against what you give here.
+          If your signature does not match your vote may not be counted. Please visit
+          {' '}
+          <a href="https://www.gov.uk/government/publications/apply-for-a-postal-vote">https://www.gov.uk/government/publications/apply-for-a-postal-vote</a>
+          {' '}
+          if you prefer to print a paper application form.
+        </p>
         <div className="ElectoralOffice">
           {!electoralOffice.loaded ? (
             <Spinner />
           ) : null}
           {electoralOffice.loaded && !electoralOffice.error ? (
-            <h2>
+            <h3>
               We will send your documents to your local electoral office email:
               {' '}
               {electoralOfficeEmail}
-            </h2>
+            </h3>
           ) : null}
           {electoralOffice.error ? (
             <Fragment>
@@ -188,9 +199,12 @@ class SignaturePage extends React.Component {
           ) : null}
         </div>
         {emptyElectoralOfficeNotification ? (
-          <h3 className="Notification">
+          <h4 className="Notification">
             You need to supply a valid electoral office email address before you can proceed.
-          </h3>
+          </h4>
+        ) : null}
+        {emptySignatureNotification ? (
+          <h4 className="Notification">You need to sign the form before you can proceed.</h4>
         ) : null}
         <Link
           className="Button"
