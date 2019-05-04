@@ -41,14 +41,9 @@ const hrfFields = {
   nin: 'National insurance number',
   changedName: 'Changed my name',
   previousName: 'Previous name',
-  postalVote: 'I would like to vote by postal vote',
   currentDate: 'Current date',
   registeredAtHome: 'My name has been entered on a register of electors in my home country',
   homeCountryConstituency: 'Name of the locality or constituency where you were last registered',
-  postalVoteOption: 'Postal vote option',
-  postalVoteElectionDate: 'Postal vote for elections on date',
-  postalVoteFrom: 'Postal vote from',
-  postalVoteTo: 'Postal vote to',
 };
 
 class SignaturePage extends React.Component {
@@ -131,7 +126,7 @@ class SignaturePage extends React.Component {
         <ul className="RevisedUserDetails">
           {
             Object.keys(formData)
-              .filter(key => (formData[key].length || /differentAddress|movedHouse|registeredAsOverseasVoter|postalVote$/.test(key))
+              .filter(key => (formData[key].length || /differentAddress|movedHouse|registeredAsOverseasVoter/.test(key))
                 && !(!formData.postalVote && key === 'postalVoteOption')
                 && key !== 'userType'
                 && key !== 'signature')
@@ -157,12 +152,6 @@ class SignaturePage extends React.Component {
           <b>vital</b>
           {' '}
           that the signature you give matches your signature when written by hand.
-          Postal vote ballots are verified by matching your signature against what you give here.
-          If your signature does not match your vote may not be counted. Please visit
-          {' '}
-          <a href="https://www.gov.uk/government/publications/apply-for-a-postal-vote">https://www.gov.uk/government/publications/apply-for-a-postal-vote</a>
-          {' '}
-          if you prefer to print a paper application form.
         </p>
         <div className="ElectoralOffice">
           {!electoralOffice.loaded ? (

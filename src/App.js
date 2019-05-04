@@ -42,7 +42,7 @@ class App extends React.Component {
         nin: '',
         changedName: '',
         previousName: '',
-        postalVote: true,
+        postalVote: false,
         currentDate: (() => {
           const currentDate = new Date();
           return `${currentDate.getFullYear()}-${twoDigitFormat(currentDate.getMonth() + 1)}-${twoDigitFormat(currentDate.getDate())}`;
