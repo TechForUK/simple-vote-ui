@@ -33,12 +33,16 @@ button, .Button {
   margin: 16px;
   background: #0FCDB0;
   text-decoration: none;
+  font-size: 1.1em;
 }
 
 .imprint {
   color: #aaa;
   padding: 10px;
-  font-size:11px;
+  font-size:15px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.3;
 }
 
 a.imprint:visited{
@@ -65,3 +69,18 @@ a.imprint:visited{
   padding: 8px 8px;
   font-size: 16px;
 }
+
+.modal-forms-link {
+  text-decoration: underline;
+}
+
+.form-title {
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  button, .Button {
+    font-size: 1.5em; 
+  }
+}
+

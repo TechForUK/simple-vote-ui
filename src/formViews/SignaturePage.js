@@ -135,11 +135,11 @@ class SignaturePage extends React.Component {
                 && key !== 'userType'
                 && key !== 'signature')
               .map(key => (
-                <li key={key}>
-                  <b>
+                <li className="detailsRow" key={key}>
+                  <span className="detailsField">
                     {hrfFields[key]}
                     :&nbsp;
-                  </b>
+                  </span>
                   {formatVale(formData[key])}
                 </li>
               ))
@@ -193,7 +193,7 @@ class SignaturePage extends React.Component {
           </h3>
         ) : null}
         <Link
-          className="Button"
+          className="Button sign"
           to="/thankYou/"
           onClick={signForm}
         >
