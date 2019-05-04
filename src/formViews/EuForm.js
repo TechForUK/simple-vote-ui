@@ -137,44 +137,6 @@ function EuForm({ history, formData, updateData }) {
           </label>
         </Fragment>
       ) : null}
-      <label htmlFor="postalVote" className="Label-SameLine">
-        <input id="postalVote" name="postalVote" type="checkbox" checked={formData.postalVote} onChange={updateData} />
-        <span>I would like to vote by postal vote</span>
-      </label>
-      {formData.postalVote ? (
-        <Fragment>
-          <label htmlFor="indefintiely" className="Label-SameLine IndentedSection">
-            <input id="indefintiely" name="postalVoteOption" type="radio" value="indefintiely" checked={formData.postalVoteOption === 'indefintiely'} onChange={updateData} />
-            <span>Until further notice</span>
-          </label>
-          <label htmlFor="specificElection" className="Label-SameLine IndentedSection">
-            <input id="specificElection" name="postalVoteOption" type="radio" value="specificElection" checked={formData.postalVoteOption === 'specificElection'} onChange={updateData} />
-            <span>For elections to be held on a specific date</span>
-          </label>
-          <label htmlFor="timePeriod" className="Label-SameLine IndentedSection">
-            <input id="timePeriod" name="postalVoteOption" type="radio" value="timePeriod" checked={formData.postalVoteOption === 'timePeriod'} onChange={updateData} />
-            <span>For a period of time</span>
-          </label>
-          {formData.postalVoteOption === 'specificElection' ? (
-            <label htmlFor="postalVoteElectionDate" className="IndentedSection">
-              <span>Elections on:</span>
-              <input id="postalVoteElectionDate" name="postalVoteElectionDate" required={formData.postalVoteOption === 'specificElection'} type="date" placeholder="YYYY-MM-DD" value={formData.postalVoteElectionDate} onChange={updateData} />
-            </label>
-          ) : null}
-          {formData.postalVoteOption === 'timePeriod' ? (
-            <Fragment>
-              <label htmlFor="postalVoteFrom" className="IndentedSection">
-                <span>From:</span>
-                <input id="postalVoteFrom" name="postalVoteFrom" required={formData.postalVoteOption === 'timePeriod'} type="date" placeholder="YYYY-MM-DD" value={formData.postalVoteFrom} onChange={updateData} />
-              </label>
-              <label htmlFor="postalVoteTo" className="IndentedSection">
-                <span>To:</span>
-                <input id="postalVoteTo" name="postalVoteTo" required={formData.postalVoteOption === 'timePeriod'} type="date" placeholder="YYYY-MM-DD" value={formData.postalVoteTo} onChange={updateData} />
-              </label>
-            </Fragment>
-          ) : null}
-        </Fragment>
-      ) : null}
       <button
         type="submit"
         className="NextButton"
