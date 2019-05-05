@@ -142,6 +142,18 @@ class SignaturePage extends React.Component {
           }
         </ul>
         <h2>Please sign:</h2>
+        <div className="Declaration">
+          <h4>Declaration:</h4>
+          <p>
+            To the best of my knowledge, the information in this form is true.
+            I understand that the information I have given on this form will be
+            used on the electoral register. I understand that if I do not make an
+            application for registration when required to do so I could face a fine
+            of £80. I understand that it is an offence knowingly to provide false
+            information in this form and if convicted I may be imprisoned for up to
+            six months and/or face an unlimited fine.
+          </p>
+        </div>
         <div className="SignaturePad">
           <SignaturePad redrawOnResize ref={(ref) => { this.signaturePad = ref; }} />
         </div>

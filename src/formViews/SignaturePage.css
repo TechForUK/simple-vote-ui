@@ -59,3 +59,16 @@ label input {
   padding: 4px;
   box-sizing: border-box;
 }
+
+.Declaration {
+  color: #B10000;
+  font-weight: 500;
+}
+
+.Declaration h4 {
+  margin-bottom: 4px;
+}
+
+.Declaration p {
+  margin-top: 0;
+}
