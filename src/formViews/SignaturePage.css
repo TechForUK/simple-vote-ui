@@ -61,11 +61,13 @@ label input {
 }
 
 .Declaration {
+  max-width: 600px;
   color: #B10000;
   font-weight: 500;
 }
 
 .Declaration h4 {
+  margin-top: 0;
   margin-bottom: 4px;
 }
 
