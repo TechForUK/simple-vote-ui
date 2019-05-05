@@ -183,7 +183,7 @@ class SignaturePage extends React.Component {
                 Please have a look
                 {' '}
                 <a
-                  href="https://www.gov.uk/get-on-electoral-register"
+                  href={`https://www.yourvotematters.co.uk/postcode-results?query=${formData.postcode}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
