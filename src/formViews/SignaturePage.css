@@ -8,6 +8,16 @@
 .RevisedUserDetails {
   list-style: none;
   padding: 0;
+  text-align: left;
+}
+
+.detailsRow {
+  margin-bottom: 4px;
+  font-weight: 700; 
+}
+
+.detailsField {
+  color: #11c0a1;
 }
 
 .ElectoralOffice {
