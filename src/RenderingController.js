@@ -15,6 +15,7 @@ import ThankYou from './ThankYou';
 import Terms from './Terms';
 import Privacy from './Privacy';
 import Cookies from './Cookies';
+import FAQ from './FAQ';
 
 class RenderingController extends React.Component {
   constructor(props) {
@@ -85,6 +86,7 @@ class RenderingController extends React.Component {
           <Route path="/termsAndConditions/" exact render={() => <Terms />} />
           <Route path="/privacyPolicy/" exact render={() => <Privacy />} />
           <Route path="/cookiePolicy/" exact render={() => <Cookies />} />
+          <Route path="/faq/" exact render={() => <FAQ />} />
           <Route
             path="/"
             render={() => (!cookieNoticeDimsissed ? (

@@ -39,6 +39,9 @@ function Welcome() {
         . We will not collect any of the data you provide, you can have a look at our
         {' '}
         <Link to="/privacyPolicy/">Privacy policy</Link>
+        . Also, check out the
+        {' '}
+        <Link to="/faq/">Frequently asked questions</Link>
         .
       </p>
     </Fragment>
